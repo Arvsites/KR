@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
+</head>
+<body>
+    <h1>Авторизация</h1>
+    <div id="wrapper">
+        <form id="signin" method="" action="">
+            <input type="text" id="user" placeholder="логин" />
+            <input type="password" id="pass" placeholder="пароль" />
+            <button type="submit">&#xf0da;</button>
+            <p>Ещё не зарегистрированы? <a href="#">click here</a></p>
+        </form>
+    </div>
+</body>
+</html>
