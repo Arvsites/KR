@@ -1,0 +1,17 @@
+body{
+	display: grid;
+	grid-template-rows: 2% 80%;
+	font-family: 'Fredoka', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+header{
+	display: grid;
+	grid-template-columns: 25% 750%;
+	align-items: start;
+}
+
+#airconds {
+	display: grid;
+}
