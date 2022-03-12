@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Aircond1(models.Model):
+class AircondData(models.Model):
     time = models.DateTimeField()
     t1 = models.SmallIntegerField(blank=True, null=True)
     t2 = models.SmallIntegerField(blank=True, null=True)
