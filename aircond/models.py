@@ -12,7 +12,4 @@ class Aircond1(models.Model):
     c1 = models.SmallIntegerField(blank=True, null=True)
     c2 = models.SmallIntegerField(blank=True, null=True)
     current = models.SmallIntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'aircond_1'
+    client_login = models.CharField(max_length=255)
