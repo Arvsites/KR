@@ -9,9 +9,10 @@
 <body>
     <div id="wrapper">
         <h1 id="login_header">Авторизация</h1>
-        <form id="signin" method="" action="">
-            <input type="text" id="user" placeholder="логин" />
-            <input type="password" id="pass" placeholder="пароль" />
+        <form id="signin" method="post" action="{% url client:client_page %}">
+            {% csrf_token %}
+            <input type="text" id="user" placeholder="логин"/>
+            <input type="password" id="pass" placeholder="пароль"/>
             <button type="submit">&#xf0da;</button>
         </form>
     </div>
