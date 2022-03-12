@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main.apps.MainConfig',
-    'login.apps.LoginConfig',
     'client.apps.ClientConfig',
     'aircond.apps.AircondConfig',
 
