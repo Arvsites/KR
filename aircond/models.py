@@ -1,3 +1,5 @@
+from django.contrib.auth.models import User
+
 from django.db import models
 
 
@@ -12,4 +14,4 @@ class AircondData(models.Model):
     c1 = models.SmallIntegerField(blank=True, null=True)
     c2 = models.SmallIntegerField(blank=True, null=True)
     current = models.SmallIntegerField(blank=True, null=True)
-    client_login = models.CharField(max_length=255)
+    client_login = models.ForeignKey(User.username, on_delete=models.CASCADE)
