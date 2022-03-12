@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'login.apps.LoginConfig',
     'client.apps.ClientConfig',
+    'aircond.apps.AircondConfig',
 
 ]
 
