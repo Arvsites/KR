@@ -45,7 +45,7 @@ a:hover:before {
 
 #welcome {
 	display:grid;
-	grid-template-rows: 70% 10% 10% 10%;
+	grid-template-rows: 70% 15% 15%;
 	align-items:center;
 	justify-content:center;
 	grid-row-gap: 5%;
