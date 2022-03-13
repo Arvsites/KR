@@ -9,4 +9,4 @@ def signin(request, username, password):
         login(request, user)
         return user
     except User.DoesNotExist:
-        return f'not_found {username}:{password}'
+        return 'user not found'
