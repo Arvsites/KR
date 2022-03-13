@@ -3,9 +3,8 @@ from django.contrib.auth import authenticate, login
 
 
 def signin(request, username, password):
-    user = authenticate(request, username=username, password=password)
-
-    if user is not None:
+    if User.objects.get(username=username):
+        user = authenticate(request, username=username, password=password)
         login(request, user)
         return user
     else:
