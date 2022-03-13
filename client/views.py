@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 from . import services
 
 
@@ -13,4 +13,7 @@ def login_page(request):
 
     user = services.signin(request, username, password)
 
-    return render(request, 'client/login.html', {'user': user})
+    if user == 'not_found':
+        return HttpResponse('Пользователь не найден')
+    else:
+        return render(request, 'client/login.html', {'user': user})

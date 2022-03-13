@@ -3,9 +3,10 @@ from django.contrib.auth import authenticate, login
 
 
 def signin(request, username, password):
-    try User.objects.get(username=username):
+    try:
+        User.objects.get(username=username)
         user = authenticate(request, username=username, password=password)
         login(request, user)
         return user
     except User.DoesNotExist:
-        return 'error'
+        return 'not_found'
