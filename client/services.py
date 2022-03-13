@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login
 
 def signin(request, username, password):
     try:
-        User.objects.get(username=usernamestr)
+        User.objects.get(username=username)
         user = authenticate(request, username=username, password=password)
         login(request, user)
         return user
