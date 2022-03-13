@@ -9,7 +9,7 @@ def client_page(request):
 
     user = services.signin(request, username, password)
 
-    if user == 'not_found':
+    if isinstance(user, str):
         return HttpResponse(user)
     else:
         return render(request, 'client/client.html', {'user': user})
