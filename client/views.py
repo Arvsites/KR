@@ -4,10 +4,6 @@ from . import services
 
 
 def client_page(request):
-    return render(request, 'client/client.html')
-
-
-def login_page(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
 
@@ -16,4 +12,8 @@ def login_page(request):
     if user == 'not_found':
         return HttpResponse('Пользователь не найден')
     else:
-        return render(request, 'client/login.html', {'user': user})
+        return render(request, 'client/client.html', {'user': user})
+
+
+def login_page(request):
+    return render(request, 'client/login.html')
