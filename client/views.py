@@ -4,13 +4,13 @@ from . import services
 
 
 def client_page(request):
-    usernamestr = request.POST.get('username')
+    username = request.POST.get('username')
     password = request.POST.get('password')
 
-    user = services.signin(request, usernamestr, password)
+    user = services.signin(request, username, password)
 
-    if user == 'not_found':
-        return HttpResponse('Пользователь не найден')
+    if user.startswith('not_found'):
+        return HttpResponse(user)
     else:
         return render(request, 'client/client.html', {'user': user})
 
