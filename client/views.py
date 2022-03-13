@@ -4,8 +4,8 @@ from . import services
 
 
 def client_page(request):
-    username = request.POST['username']
-    password = request.POST['password']
+    username = request.POST.get('username')
+    password = request.POST.get('password')
 
     user = services.signin(request, username, password)
 
