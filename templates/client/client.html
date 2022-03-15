@@ -11,23 +11,19 @@
 </head>
 <body>
     <header>
-        <p>{{ user.username }}</p>
-        <p>logout</p>
+        <p>Здравствуйте, {{ user.username }}</p>
     </header>
     <div id='airconds'>
         <div class="aircond_data">
         	<p>Кондиционер1</p>
-
         	<div class="errors">
         		<p>Ошибки отсутствуют</p>
         	</div>
-        	<p>датчики температуры</p>
+        	<p>датчик температуры</p>
 			<iframe src="{{ grafana_data.temperature }}" width="1080" height="590" frameborder="0"></iframe>
         	<p>датчик давления</p>
         	<img src="https://datavizcatalogue.com/RU/metody/images/top_images/SVG/linejnyj_grafik.svg">
-        	<p>первый датчик наличия контакта</p>
-        	<img src="https://datavizcatalogue.com/RU/metody/images/top_images/SVG/linejnyj_grafik.svg">
-        	<p>второй датчик наличия контакта</p>
+        	<p>датчики наличия контакта</p>
         	<img src="https://datavizcatalogue.com/RU/metody/images/top_images/SVG/linejnyj_grafik.svg">
         	<p>датчик тока</p>
         	<img src="https://datavizcatalogue.com/RU/metody/images/top_images/SVG/linejnyj_grafik.svg">
