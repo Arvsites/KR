@@ -12,7 +12,8 @@ def client_page(request):
     if isinstance(user, str):
         return HttpResponse(user)
     else:
-        return render(request, 'client/client.html', {'user': user})
+        grafana_temperature = services.show_data(user)['temperature']
+        return render(request, 'client/client.html', {'user': user}, {'temp': grafana_temperature})
 
 
 def login_page(request):

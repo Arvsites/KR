@@ -1,4 +1,6 @@
 from django.contrib.auth.models import User
+
+from .models import AircondData
 from django.contrib.auth import authenticate, login
 
 
@@ -13,3 +15,11 @@ def signin(request, username, password):
             return 'wrong password'
     except User.DoesNotExist:
         return 'user not found'
+
+
+def show_data(user):
+    """Get data for showing grafana graphics"""
+    user_id = user.id
+    temperature = f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/aircond{str(user_id)}?orgId=2&from=1646673250536&to" \
+                 f"=1647278050536&theme=dark&panelId=2"
+    return {'temperature': temperature}
