@@ -17,7 +17,7 @@ def signin(request, username, password):
         return 'user not found'
 
 
-def show_data(user):
+def get_data(user):
     """Get data for showing grafana graphics"""
     user_id = user.id
     temperature = f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/aircond{str(user_id)}?orgId=2&from=1646673250536&to" \
