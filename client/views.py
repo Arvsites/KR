@@ -12,7 +12,7 @@ def client_page(request):
     if isinstance(user, str):
         return HttpResponse(user)
     else:
-        grafana_data = services.show_data(user)['temperature']
+        grafana_data = services.show_data(user)
         return render(request, 'client/client.html', {'user': user, 'temp': grafana_data})
 
 
