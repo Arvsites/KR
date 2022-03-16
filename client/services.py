@@ -20,6 +20,6 @@ def signin(request, username, password):
 def get_data(user):
     """Get data for showing grafana graphics"""
     user_id = user.id
-    temperature = f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/aircond{str(user_id)}?orgId=2&from=1646673250536&to" \
-                 f"=1647278050536&theme=dark&panelId=2"
+    temperature = f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/aircond{str(user_id)}?orgId=2&from=now-7d&to" \
+                 f"=now&theme=dark&panelId=2"
     return {'temperature': temperature}
