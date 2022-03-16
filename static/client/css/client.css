@@ -4,6 +4,8 @@ body{
 	font-family: 'Fredoka', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
+	background: rgb(52, 56, 61);
+	color: #ffffff;
 }
 
 header{
