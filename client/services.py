@@ -28,15 +28,17 @@ def get_data(user):
                 continue
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
-            for i in range(1, airconds_count * 2 + 1):
-                grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/UC6uihP7z/user{client.id}?orgId=2&from"
-                                         f"=now-7d&to=now&theme=dark&panelId={i}")
+            for i in range(1, airconds_count + 1):
+                for z in range(1, 4):
+                    grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/UC6uihP7z/user{client.id}?orgId=2&from"
+                                             f"=now-7d&to=now&theme=dark&panelId={z}")
 
             return grafana_data_list
 
     airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
-    for i in range(1, airconds_count * 2 + 1):
-        grafana_data_list.append(f"http://37.140.197.191:3000/d/bDeXhSEnk/user{str(user_id)}?orgId=2&from"
-                                 f"=now-7d&to=now&theme=dark&PanelId={str(i)}")
+    for i in range(1, airconds_count + 1):
+        for z in range(1, 4):
+            grafana_data_list.append(f"http://37.140.197.191:3000/d/bDeXhSEnk/user{str(user_id)}?orgId=2&from"
+                                     f"=now-7d&to=now&theme=dark&PanelId={str(z)}")
 
     return grafana_data_list
