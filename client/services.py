@@ -32,7 +32,7 @@ def get_data(user):
         for client in User.objects.all():
             if client.id == 1:
                 continue
-            client_id = AircondData.objects.filter(client_login_id=client.id)
+            client_id = AircondData.objects.filter(client_login=client.id)
             first_data_object = client_id.first()
             airconds_count = first_data_object.airconds_count
             for i in range(1, airconds_count * 2 + 1):
