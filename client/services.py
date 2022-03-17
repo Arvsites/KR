@@ -20,7 +20,11 @@ def signin(request, username, password):
 def get_data(user):
     """Get data for showing grafana graphics"""
     user_id = user.id
-    airconds_count = AircondData.objects.filter(client_login=user_id).first().airconds_count
+
+    try:
+        airconds_count = AircondData.objects.filter(client_login=user_id).first().airconds_count
+    except AttributeError:
+        return 'кондиционеров не найдено'
 
     grafana_data_list = []
 
