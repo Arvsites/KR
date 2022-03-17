@@ -49,12 +49,12 @@ def get_data(user):
         for z in range(1, 4):
             if user_id == 6:
                 grafana_data_list.append(
-                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user6']}/user{client.id}?orgId"
+                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user6']}/user{user_id}?orgId"
                     f"=2&from "
                     f"=now-7d&to=now&theme=dark&panelId={z}")
             if user_id == 5:
                 grafana_data_list.append(
-                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user5']}/user{client.id}?orgId"
+                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user5']}/user{user_id}?orgId"
                     f"=2&from "
                     f"=now-7d&to=now&theme=dark&panelId={z}")
 
