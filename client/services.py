@@ -22,7 +22,7 @@ def get_data(user):
     user_id = user.id
 
     try:
-        airconds_count = AircondData.objects.filter(client_login=user_id).first().airconds_count
+        airconds_count = ClientAirconddata.objects.filter(client_login=user_id).first().airconds_count
     except AttributeError:
         return ['кондиционеров не найдено']
 
