@@ -13,5 +13,5 @@ class AircondData(models.Model):
     pressure = models.SmallIntegerField(blank=True, null=True)
     cond_id = models.SmallIntegerField(blank=True, null=True)
     current = models.SmallIntegerField(blank=True, null=True)
-    client_login = models.ForeignKey(User, on_delete=models.CASCADE)
+    client_login_id = models.ForeignKey(User, on_delete=models.CASCADE)
     airconds_count = models.SmallIntegerField(blank=True, null=True)
