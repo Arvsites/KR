@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 
-from .models import AircondData
+from .models import ClientAirconddata
 from django.contrib.auth import authenticate, login
 
 
@@ -32,9 +32,7 @@ def get_data(user):
         for client in User.objects.all():
             if client.id == 1:
                 continue
-            data = AircondData.objects.filter(client_login_id=client.id)
-            first_data_object = data.first()
-            airconds_count = first_data_object.airconds_count
+            airconds_count = ClientAirconddata.objects.filter(client_login_id=client.id).first().airconds_count
             for i in range(1, airconds_count * 2 + 1):
                 grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/user{str(client.id)}?orgId=2&from"
                                          f"=now-7d&to=now&theme=dark&viewPanel={str(i)}")
