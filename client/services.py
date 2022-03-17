@@ -21,11 +21,6 @@ def get_data(user):
     """Get data for showing grafana graphics"""
     user_id = user.id
 
-    try:
-        airconds_count = Airconddata.objects.filter(client_id=user_id).first().airconds_count
-    except AttributeError:
-        return ['кондиционеров не найдено']
-
     grafana_data_list = []
 
     if user_id == 1:
