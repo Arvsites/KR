@@ -29,7 +29,7 @@ def get_data(user):
             if client_id == 1:
                 continue
 
-            test = Airconddata.objects.get(id=32).client_id
+            test = Airconddata._meta.get_fields()
             airconds_count = Airconddata.objects.filter(client_id=client.id).first().airconds_count
             for i in range(1, airconds_count * 2 + 1):
                 grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/user{str(client.id)}?orgId=2&from"
