@@ -23,10 +23,10 @@ def get_data(user):
 
     grafana_data_list = []
 
-    if user_id == 1 or user_id == 5:
+    if user_id == 1:
         for client in User.objects.all():
             client_id = client.id
-            if client_id == 1:
+            if client_id == 1 or client_id == 5:
                 continue
 
             test = Airconddata._meta.get_fields()
