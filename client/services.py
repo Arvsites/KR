@@ -20,6 +20,12 @@ def signin(request, username, password):
 def get_data(user):
     """Get data for showing grafana graphics"""
     user_id = user.id
-    temperature = f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/aircond{str(user_id)}?orgId=2&from=now-7d&to" \
-                 f"=now&theme=dark&panelId=2"
-    return {'temperature': temperature}
+    airconds_count = AircondData.objects.filter(client_login=user_id).first().airconds_count
+
+    grafana_data_list = []
+
+    for data in range(1, airconds_count * 2 + 1):
+        grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/user{str(user_id)}?orgId=2&from"
+                                 f"=now-7d&to=now&theme=dark&viewPanel={str(i)}")
+
+    return grafana_data_list
