@@ -27,7 +27,7 @@ def get_data(user):
             if client.id == 1 or client.id == 5:
                 continue
 
-            airconds_count = Airconddata.objects.filter(client=client_id).first().airconds_count
+            airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             for i in range(1, airconds_count * 2 + 1):
                 grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/UC6uihP7z/user{str(client.id)}?orgId=2&from"
                                          f"=now-7d&to=now&theme=dark&viewPanel={str(i)}")
