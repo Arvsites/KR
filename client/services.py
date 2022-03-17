@@ -24,7 +24,7 @@ def get_data(user):
     try:
         airconds_count = AircondData.objects.filter(client_login=user_id).first().airconds_count
     except AttributeError:
-        return 'кондиционеров не найдено'
+        return ['кондиционеров не найдено']
 
     grafana_data_list = []
 
