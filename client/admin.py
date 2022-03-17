@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ClientAirconddata
+from .models import Airconddata
 
 
-admin.site.register(ClientAirconddata)
+admin.site.register(Airconddata)
