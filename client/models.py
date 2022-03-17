@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class ClientAirconddata(models.Model):
+class Airconddata(models.Model):
     id = models.BigAutoField(primary_key=True)
     time = models.DateTimeField()
     t1 = models.SmallIntegerField(blank=True, null=True)
@@ -16,7 +16,3 @@ class ClientAirconddata(models.Model):
     client_id = models.ForeignKey(User, on_delete=models.CASCADE)
     cond_id = models.SmallIntegerField(blank=True, null=True)
     airconds_count = models.SmallIntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'client_airconddata'
