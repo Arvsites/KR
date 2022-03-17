@@ -11,8 +11,6 @@ class AircondData(models.Model):
     t4 = models.SmallIntegerField(blank=True, null=True)
     t5 = models.SmallIntegerField(blank=True, null=True)
     pressure = models.SmallIntegerField(blank=True, null=True)
-    c1 = models.SmallIntegerField(blank=True, null=True)
-    c2 = models.SmallIntegerField(blank=True, null=True)
     cond_id = models.SmallIntegerField(blank=True, null=True)
     current = models.SmallIntegerField(blank=True, null=True)
     client_login = models.ForeignKey(User, on_delete=models.CASCADE)
