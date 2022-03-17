@@ -20,19 +20,16 @@ def signin(request, username, password):
 def get_data(user):
     """Get data for showing grafana graphics"""
     user_id = user.id
-
     grafana_data_list = []
 
     if user_id == 1:
         for client in User.objects.all():
-            client_id = client.id
-            if client_id == 1 or client_id == 5:
+            if client.id == 1 or client.id == 5:
                 continue
 
-            test = Airconddata._meta.get_fields()
             airconds_count = Airconddata.objects.filter(client=client_id).first().airconds_count
             for i in range(1, airconds_count * 2 + 1):
-                grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/bDeXhSEnk/user{str(client.id)}?orgId=2&from"
+                grafana_data_list.append(f"http://37.140.197.191:3000/d-solo/UC6uihP7z/user{str(client.id)}?orgId=2&from"
                                          f"=now-7d&to=now&theme=dark&viewPanel={str(i)}")
                 return grafana_data_list
 
