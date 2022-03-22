@@ -48,11 +48,11 @@ def load_data(aircond_num: str):
     try:
         data = ast.literal_eval(receive(client,aircond_num))
         print(data)
-        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 1, {data['i1']}, 5, 1)")
+        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 3, {data['i1']}, 6, 2)")
         conn.commit()
     except ValueError:
         pass
 
 
 while True:
-    load_data('1')
+    load_data('3')
