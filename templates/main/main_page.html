@@ -1,13 +1,17 @@
 {% load static %}
+{% load pwa %}
+{% progressive_web_app_meta %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Добро пожаловать!</title>
     <link rel="stylesheet" type="text/css" href="{% static '/main/css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <script src="../../static/js/serviceworker.js"></script>
 </head>
 <body>
     <div id="welcome">

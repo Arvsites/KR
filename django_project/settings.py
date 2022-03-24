@@ -16,18 +16,11 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'AbnEuCaCqV2L570Ph3PTAnkEg3JFHAhFYfz4yRz6E2ENVuNuayJ0hTsVTyfasB5y'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+# Application definition
 DEBUG = True
 
-ALLOWED_HOSTS = ['37.140.197.191', '2a00:f940:2:4:2::2619', '37-140-197-191.cloudvps.regruhosting.ru']
-
-# Application definition
+ALLOWED_HOSTS = ['localhost', '37.140.197.191', '2a00:f940:2:4:2::2619', '37-140-197-191.cloudvps.regruhosting.ru',
+                 'multimer.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,6 +32,7 @@ INSTALLED_APPS = [
 
     'main.apps.MainConfig',
     'client.apps.ClientConfig',
+    'pwa',
 
 ]
 
@@ -124,3 +118,39 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+# PWA
+
+PWA_APP_NAME = 'multimer'
+PWA_APP_DESCRIPTION = "multimer"
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/main/img/Logo.png',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/main/img/Logo.png',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_SPLASH_SCREEN = [
+    {
+        'src': 'static/main/img/Logo.png',
+        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'ru-RU'
+
+try:
+    from .local_settings import *
+except ImportError:
+    from .prod_settings import *
