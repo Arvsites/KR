@@ -34,12 +34,12 @@ def get_data(user):
                     if client.id == 3:
                         grafana_data_list.append(
                             f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
-                            f"=1&from "
+                            f"=1&from"
                             f"=now-7d&to=now&theme=dark&panelId={z}")
                     if client.id == 2:
                         grafana_data_list.append(
                             f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
-                            f"=1&from "
+                            f"=1&from"
                             f"=now-7d&to=now&theme=dark&panelId={z}")
 
             return grafana_data_list
@@ -50,12 +50,12 @@ def get_data(user):
             if user_id == 3:
                 grafana_data_list.append(
                     f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
-                    f"=1&from "
+                    f"=1&from"
                     f"=now-7d&to=now&theme=dark&panelId={z}")
             if user_id == 2:
                 grafana_data_list.append(
                     f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
-                    f"=1&from "
+                    f"=1&from"
                     f"=now-7d&to=now&theme=dark&panelId={z}")
 
     return grafana_data_list
