@@ -18,28 +18,28 @@ def signin(request, username, password):
 
 
 def get_data(user):
-    grafana_links_parts = {'user5': 'P3c0ghPnz', 'user6': 'UC6uihP7z'}
+    grafana_links_parts = {'user2': 'O3upqisnk', 'user3': '_Is_3msnk'}
     """Get data for showing grafana graphics"""
     user_id = user.id
     grafana_data_list = []
 
     if user_id == 1:
         for client in User.objects.all():
-            if client.id == 1 or client.id == 5:
+            if client.id == 1:
                 continue
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             for i in range(1, airconds_count + 1):
                 for z in range(1, 4):
-                    if client.id == 6:
+                    if client.id == 3:
                         grafana_data_list.append(
-                            f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user6']}/user{client.id}?orgId"
-                            f"=2&from "
+                            f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
+                            f"=1&from "
                             f"=now-7d&to=now&theme=dark&panelId={z}")
-                    if client.id == 5:
+                    if client.id == 2:
                         grafana_data_list.append(
-                            f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user5']}/user{client.id}?orgId"
-                            f"=2&from "
+                            f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
+                            f"=1&from "
                             f"=now-7d&to=now&theme=dark&panelId={z}")
 
             return grafana_data_list
@@ -47,15 +47,15 @@ def get_data(user):
     airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
     for i in range(1, airconds_count + 1):
         for z in range(1, 4):
-            if user_id == 6:
+            if user_id == 3:
                 grafana_data_list.append(
-                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user6']}/user{user_id}?orgId"
-                    f"=2&from "
+                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
+                    f"=1&from "
                     f"=now-7d&to=now&theme=dark&panelId={z}")
-            if user_id == 5:
+            if user_id == 2:
                 grafana_data_list.append(
-                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user5']}/user{user_id}?orgId"
-                    f"=2&from "
+                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
+                    f"=1&from "
                     f"=now-7d&to=now&theme=dark&panelId={z}")
 
     return grafana_data_list
