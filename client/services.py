@@ -33,12 +33,12 @@ def get_data(user):
                 for z in range(1, 4):
                     if client.id == 3:
                         grafana_data_list.append(
-                            f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
+                            f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
                             f"=1&from "
                             f"=now-7d&to=now&theme=dark&panelId={z}")
                     if client.id == 2:
                         grafana_data_list.append(
-                            f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
+                            f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
                             f"=1&from "
                             f"=now-7d&to=now&theme=dark&panelId={z}")
 
@@ -49,12 +49,12 @@ def get_data(user):
         for z in range(1, 4):
             if user_id == 3:
                 grafana_data_list.append(
-                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
+                    f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
                     f"=1&from "
                     f"=now-7d&to=now&theme=dark&panelId={z}")
             if user_id == 2:
                 grafana_data_list.append(
-                    f"http://37.140.197.191:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
+                    f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
                     f"=1&from "
                     f"=now-7d&to=now&theme=dark&panelId={z}")
 
