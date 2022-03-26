@@ -1,0 +1,1105 @@
+Invalid value for user: gunicorn_worker
+
+
+Error: No such user: 'gunicorn_worker'
+Invalid value for user: gunicorn_worker
+
+
+Error: No such user: 'gunicorn_worker'
+Invalid value for user: gunicorn_worker
+
+
+Error: No such user: 'gunicorn_worker'
+Invalid value for user: gunicorn_worker
+
+
+Error: No such user: 'gunicorn_worker'
+Invalid value for user: gunicorn_worker
+
+
+Error: No such user: 'gunicorn_worker'
+Invalid value for user: gunicorn_worker
+
+
+Error: No such user: 'gunicorn_worker'
+[2022-03-25 09:44:04 +0300] [22327] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:44:04 +0300] [22327] [INFO] Listening at: http://127.0.0.1:8000 (22327)
+[2022-03-25 09:44:04 +0300] [22327] [INFO] Using worker: sync
+[2022-03-25 09:44:04 +0300] [22329] [INFO] Booting worker with pid: 22329
+[2022-03-25 09:44:04 +0300] [22330] [INFO] Booting worker with pid: 22330
+Not Found: /favicon.ico
+[2022-03-25 09:51:36 +0300] [22327] [INFO] Handling signal: term
+[2022-03-25 09:51:36 +0300] [22329] [INFO] Worker exiting (pid: 22329)
+[2022-03-25 09:51:36 +0300] [22330] [INFO] Worker exiting (pid: 22330)
+[2022-03-25 09:51:36 +0300] [22327] [INFO] Shutting down: Master
+[2022-03-25 09:51:37 +0300] [22412] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:51:37 +0300] [22412] [INFO] Listening at: http://127.0.0.1:8000 (22412)
+[2022-03-25 09:51:37 +0300] [22412] [INFO] Using worker: sync
+[2022-03-25 09:51:37 +0300] [22414] [INFO] Booting worker with pid: 22414
+[2022-03-25 09:51:37 +0300] [22415] [INFO] Booting worker with pid: 22415
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+[2022-03-25 09:52:59 +0300] [22412] [INFO] Handling signal: term
+[2022-03-25 09:52:59 +0300] [22415] [INFO] Worker exiting (pid: 22415)
+[2022-03-25 09:52:59 +0300] [22414] [INFO] Worker exiting (pid: 22414)
+[2022-03-25 09:52:59 +0300] [22412] [INFO] Shutting down: Master
+[2022-03-25 09:52:59 +0300] [22433] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:52:59 +0300] [22433] [INFO] Listening at: http://127.0.0.1:8000 (22433)
+[2022-03-25 09:52:59 +0300] [22433] [INFO] Using worker: sync
+[2022-03-25 09:52:59 +0300] [22435] [INFO] Booting worker with pid: 22435
+[2022-03-25 09:52:59 +0300] [22436] [INFO] Booting worker with pid: 22436
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+[2022-03-25 09:54:08 +0300] [22433] [INFO] Handling signal: term
+[2022-03-25 09:54:08 +0300] [22436] [INFO] Worker exiting (pid: 22436)
+[2022-03-25 09:54:08 +0300] [22435] [INFO] Worker exiting (pid: 22435)
+[2022-03-25 09:54:08 +0300] [22433] [INFO] Shutting down: Master
+[2022-03-25 09:54:08 +0300] [22456] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:54:08 +0300] [22456] [INFO] Listening at: http://127.0.0.1:8000 (22456)
+[2022-03-25 09:54:08 +0300] [22456] [INFO] Using worker: sync
+[2022-03-25 09:54:08 +0300] [22458] [INFO] Booting worker with pid: 22458
+[2022-03-25 09:54:08 +0300] [22459] [INFO] Booting worker with pid: 22459
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'pwa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/main/views.py", line 7, in index
+    return render(request, 'main/main_page.html')
+  File "/home/root/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 176, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'pwa' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'pwa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/main/views.py", line 7, in index
+    return render(request, 'main/main_page.html')
+  File "/home/root/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 176, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'pwa' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'pwa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/main/views.py", line 7, in index
+    return render(request, 'main/main_page.html')
+  File "/home/root/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 176, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'pwa' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Not Found: /favicon.ico
+[2022-03-25 09:55:25 +0300] [22456] [INFO] Handling signal: term
+[2022-03-25 09:55:25 +0300] [22459] [INFO] Worker exiting (pid: 22459)
+[2022-03-25 09:55:25 +0300] [22458] [INFO] Worker exiting (pid: 22458)
+[2022-03-25 09:55:26 +0300] [22456] [INFO] Shutting down: Master
+[2022-03-25 09:55:26 +0300] [22478] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:55:26 +0300] [22478] [INFO] Listening at: http://127.0.0.1:8000 (22478)
+[2022-03-25 09:55:26 +0300] [22478] [INFO] Using worker: sync
+[2022-03-25 09:55:26 +0300] [22480] [INFO] Booting worker with pid: 22480
+[2022-03-25 09:55:26 +0300] [22481] [INFO] Booting worker with pid: 22481
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'pwa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/main/views.py", line 7, in index
+    return render(request, 'main/main_page.html')
+  File "/home/root/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 176, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'pwa' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'pwa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/main/views.py", line 7, in index
+    return render(request, 'main/main_page.html')
+  File "/home/root/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 176, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'pwa' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'pwa'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/main/views.py", line 7, in index
+    return render(request, 'main/main_page.html')
+  File "/home/root/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 176, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/home/root/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'pwa' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Not Found: /favicon.ico
+[2022-03-25 09:56:03 +0300] [22478] [INFO] Handling signal: term
+[2022-03-25 09:56:03 +0300] [22480] [INFO] Worker exiting (pid: 22480)
+[2022-03-25 09:56:03 +0300] [22481] [INFO] Worker exiting (pid: 22481)
+[2022-03-25 09:56:03 +0300] [22478] [INFO] Shutting down: Master
+[2022-03-25 09:56:03 +0300] [22497] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:56:03 +0300] [22497] [INFO] Listening at: http://127.0.0.1:8000 (22497)
+[2022-03-25 09:56:03 +0300] [22497] [INFO] Using worker: sync
+[2022-03-25 09:56:03 +0300] [22499] [INFO] Booting worker with pid: 22499
+[2022-03-25 09:56:03 +0300] [22500] [INFO] Booting worker with pid: 22500
+Not Found: /favicon.ico
+Not Found: /wp-admin/setup-config.php
+Not Found: /wp-admin/install.php
+[2022-03-25 09:58:26 +0300] [22497] [INFO] Handling signal: term
+[2022-03-25 09:58:26 +0300] [22500] [INFO] Worker exiting (pid: 22500)
+[2022-03-25 09:58:26 +0300] [22499] [INFO] Worker exiting (pid: 22499)
+[2022-03-25 09:58:27 +0300] [22497] [INFO] Shutting down: Master
+[2022-03-25 09:58:27 +0300] [22511] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 09:58:27 +0300] [22511] [INFO] Listening at: http://127.0.0.1:8000 (22511)
+[2022-03-25 09:58:27 +0300] [22511] [INFO] Using worker: sync
+[2022-03-25 09:58:27 +0300] [22513] [INFO] Booting worker with pid: 22513
+[2022-03-25 09:58:27 +0300] [22514] [INFO] Booting worker with pid: 22514
+Not Found: /favicon.ico
+[2022-03-25 10:09:10 +0300] [22511] [INFO] Handling signal: term
+[2022-03-25 10:09:10 +0300] [22513] [INFO] Worker exiting (pid: 22513)
+[2022-03-25 10:09:10 +0300] [22514] [INFO] Worker exiting (pid: 22514)
+[2022-03-25 10:09:11 +0300] [22511] [INFO] Shutting down: Master
+[2022-03-25 10:09:11 +0300] [22575] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 10:09:11 +0300] [22575] [INFO] Listening at: http://127.0.0.1:8000 (22575)
+[2022-03-25 10:09:11 +0300] [22575] [INFO] Using worker: sync
+[2022-03-25 10:09:11 +0300] [22577] [INFO] Booting worker with pid: 22577
+[2022-03-25 10:09:11 +0300] [22578] [INFO] Booting worker with pid: 22578
+Not Found: /favicon.ico
+[2022-03-25 10:19:04 +0300] [22575] [INFO] Handling signal: term
+[2022-03-25 10:19:04 +0300] [22578] [INFO] Worker exiting (pid: 22578)
+[2022-03-25 10:19:04 +0300] [22577] [INFO] Worker exiting (pid: 22577)
+[2022-03-25 10:19:04 +0300] [22575] [INFO] Shutting down: Master
+[2022-03-25 10:19:04 +0300] [22718] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 10:19:04 +0300] [22718] [INFO] Listening at: http://127.0.0.1:8000 (22718)
+[2022-03-25 10:19:04 +0300] [22718] [INFO] Using worker: sync
+[2022-03-25 10:19:04 +0300] [22720] [INFO] Booting worker with pid: 22720
+[2022-03-25 10:19:04 +0300] [22721] [INFO] Booting worker with pid: 22721
+[2022-03-25 10:21:09 +0300] [22718] [INFO] Handling signal: term
+[2022-03-25 10:21:09 +0300] [22721] [INFO] Worker exiting (pid: 22721)
+[2022-03-25 10:21:09 +0300] [22720] [INFO] Worker exiting (pid: 22720)
+[2022-03-25 10:21:10 +0300] [22718] [INFO] Shutting down: Master
+[2022-03-25 10:21:10 +0300] [22758] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 10:21:10 +0300] [22758] [INFO] Listening at: http://127.0.0.1:8000 (22758)
+[2022-03-25 10:21:10 +0300] [22758] [INFO] Using worker: sync
+[2022-03-25 10:21:10 +0300] [22760] [INFO] Booting worker with pid: 22760
+[2022-03-25 10:21:10 +0300] [22761] [INFO] Booting worker with pid: 22761
+[2022-03-25 10:23:53 +0300] [22758] [INFO] Handling signal: term
+[2022-03-25 10:23:53 +0300] [22760] [INFO] Worker exiting (pid: 22760)
+[2022-03-25 10:23:53 +0300] [22761] [INFO] Worker exiting (pid: 22761)
+[2022-03-25 10:23:54 +0300] [22758] [INFO] Shutting down: Master
+[2022-03-25 10:23:54 +0300] [22773] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 10:23:54 +0300] [22773] [INFO] Listening at: http://127.0.0.1:8000 (22773)
+[2022-03-25 10:23:54 +0300] [22773] [INFO] Using worker: sync
+[2022-03-25 10:23:54 +0300] [22775] [INFO] Booting worker with pid: 22775
+[2022-03-25 10:23:54 +0300] [22776] [INFO] Booting worker with pid: 22776
+[2022-03-25 10:24:36 +0300] [22773] [INFO] Handling signal: term
+[2022-03-25 10:24:36 +0300] [22776] [INFO] Worker exiting (pid: 22776)
+[2022-03-25 10:24:36 +0300] [22775] [INFO] Worker exiting (pid: 22775)
+[2022-03-25 10:24:37 +0300] [22773] [INFO] Shutting down: Master
+[2022-03-25 10:24:37 +0300] [22827] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 10:24:37 +0300] [22827] [INFO] Listening at: http://127.0.0.1:8000 (22827)
+[2022-03-25 10:24:37 +0300] [22827] [INFO] Using worker: sync
+[2022-03-25 10:24:37 +0300] [22829] [INFO] Booting worker with pid: 22829
+[2022-03-25 10:24:37 +0300] [22830] [INFO] Booting worker with pid: 22830
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /client/
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/root/KR/client/views.py", line 15, in client_page
+    grafana_data = services.get_data(user)
+  File "/home/root/KR/client/services.py", line 47, in get_data
+    airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
+AttributeError: 'NoneType' object has no attribute 'airconds_count'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /favicon.ico
+Not Found: /boaform/admin/formLogin
+Not Found: /setup.cgi
+[2022-03-25 13:06:19 +0300] [22827] [INFO] Handling signal: term
+[2022-03-25 13:06:19 +0300] [22829] [INFO] Worker exiting (pid: 22829)
+[2022-03-25 13:06:19 +0300] [22830] [INFO] Worker exiting (pid: 22830)
+[2022-03-25 13:06:20 +0300] [22827] [INFO] Shutting down: Master
+[2022-03-25 13:06:20 +0300] [25069] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 13:06:20 +0300] [25069] [INFO] Listening at: http://127.0.0.1:8000 (25069)
+[2022-03-25 13:06:20 +0300] [25069] [INFO] Using worker: sync
+[2022-03-25 13:06:20 +0300] [25071] [INFO] Booting worker with pid: 25071
+[2022-03-25 13:06:20 +0300] [25072] [INFO] Booting worker with pid: 25072
+[2022-03-25 13:07:35 +0300] [25069] [INFO] Handling signal: term
+[2022-03-25 13:07:35 +0300] [25072] [INFO] Worker exiting (pid: 25072)
+[2022-03-25 13:07:35 +0300] [25071] [INFO] Worker exiting (pid: 25071)
+[2022-03-25 13:07:35 +0300] [25069] [INFO] Shutting down: Master
+[2022-03-25 13:07:35 +0300] [25109] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 13:07:35 +0300] [25109] [INFO] Listening at: http://127.0.0.1:8000 (25109)
+[2022-03-25 13:07:35 +0300] [25109] [INFO] Using worker: sync
+[2022-03-25 13:07:35 +0300] [25111] [INFO] Booting worker with pid: 25111
+[2022-03-25 13:07:35 +0300] [25112] [INFO] Booting worker with pid: 25112
+Forbidden (CSRF token from POST incorrect.): /client/
+[2022-03-25 13:13:18 +0300] [25109] [INFO] Handling signal: term
+[2022-03-25 13:13:18 +0300] [25112] [INFO] Worker exiting (pid: 25112)
+[2022-03-25 13:13:18 +0300] [25111] [INFO] Worker exiting (pid: 25111)
+[2022-03-25 13:13:18 +0300] [25109] [INFO] Shutting down: Master
+[2022-03-25 13:13:18 +0300] [25254] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 13:13:18 +0300] [25254] [INFO] Listening at: http://127.0.0.1:8000 (25254)
+[2022-03-25 13:13:18 +0300] [25254] [INFO] Using worker: sync
+[2022-03-25 13:13:19 +0300] [25256] [INFO] Booting worker with pid: 25256
+[2022-03-25 13:13:19 +0300] [25257] [INFO] Booting worker with pid: 25257
+[2022-03-25 13:14:38 +0300] [25254] [INFO] Handling signal: term
+[2022-03-25 13:14:38 +0300] [25256] [INFO] Worker exiting (pid: 25256)
+[2022-03-25 13:14:38 +0300] [25257] [INFO] Worker exiting (pid: 25257)
+[2022-03-25 13:14:38 +0300] [25254] [INFO] Shutting down: Master
+[2022-03-25 13:14:38 +0300] [25293] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 13:14:38 +0300] [25293] [INFO] Listening at: http://127.0.0.1:8000 (25293)
+[2022-03-25 13:14:38 +0300] [25293] [INFO] Using worker: sync
+[2022-03-25 13:14:38 +0300] [25295] [INFO] Booting worker with pid: 25295
+[2022-03-25 13:14:38 +0300] [25296] [INFO] Booting worker with pid: 25296
+Forbidden (CSRF token from POST incorrect.): /client/
+[2022-03-25 13:18:00 +0300] [25293] [INFO] Handling signal: term
+[2022-03-25 13:18:00 +0300] [25296] [INFO] Worker exiting (pid: 25296)
+[2022-03-25 13:18:00 +0300] [25295] [INFO] Worker exiting (pid: 25295)
+[2022-03-25 13:18:00 +0300] [25293] [INFO] Shutting down: Master
+[2022-03-25 13:18:00 +0300] [25345] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 13:18:00 +0300] [25345] [INFO] Listening at: http://127.0.0.1:8000 (25345)
+[2022-03-25 13:18:00 +0300] [25345] [INFO] Using worker: sync
+[2022-03-25 13:18:00 +0300] [25347] [INFO] Booting worker with pid: 25347
+[2022-03-25 13:18:00 +0300] [25348] [INFO] Booting worker with pid: 25348
+Not Found: /favicon.ico
+Forbidden (CSRF token from POST incorrect.): /client/
+Forbidden (CSRF token from POST incorrect.): /client/
+Not Found: /fuN3
+Not Found: /.env
+[2022-03-25 15:45:21 +0300] [25345] [INFO] Handling signal: term
+[2022-03-25 15:45:21 +0300] [25347] [INFO] Worker exiting (pid: 25347)
+[2022-03-25 15:45:21 +0300] [25348] [INFO] Worker exiting (pid: 25348)
+[2022-03-25 15:45:21 +0300] [25345] [INFO] Shutting down: Master
+[2022-03-25 15:45:21 +0300] [26062] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 15:45:21 +0300] [26062] [INFO] Listening at: http://127.0.0.1:8000 (26062)
+[2022-03-25 15:45:21 +0300] [26062] [INFO] Using worker: sync
+[2022-03-25 15:45:21 +0300] [26064] [INFO] Booting worker with pid: 26064
+[2022-03-25 15:45:22 +0300] [26065] [INFO] Booting worker with pid: 26065
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 37
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 155, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 37
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+[2022-03-25 15:47:22 +0300] [26062] [INFO] Handling signal: term
+[2022-03-25 15:47:22 +0300] [26064] [INFO] Worker exiting (pid: 26064)
+[2022-03-25 15:47:22 +0300] [26065] [INFO] Worker exiting (pid: 26065)
+[2022-03-25 15:47:22 +0300] [26062] [INFO] Shutting down: Master
+[2022-03-25 15:47:22 +0300] [26076] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 15:47:22 +0300] [26076] [INFO] Listening at: http://127.0.0.1:8000 (26076)
+[2022-03-25 15:47:22 +0300] [26076] [INFO] Using worker: sync
+[2022-03-25 15:47:22 +0300] [26078] [INFO] Booting worker with pid: 26078
+[2022-03-25 15:47:22 +0300] [26079] [INFO] Booting worker with pid: 26079
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 155, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 155, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 155, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/root/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/home/root/venv/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 155, in is_valid_path
+    return resolve(path, urlconf)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 649, in resolve
+    for pattern in self.url_patterns:
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 696, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/root/venv/lib/python3.8/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 689, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/django_project/urls.py", line 23, in <module>
+    path('client/', include('client.urls')),
+  File "/home/root/venv/lib/python3.8/site-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/root/KR/client/urls.py", line 3, in <module>
+    from . import views
+  File "/home/root/KR/client/views.py", line 3, in <module>
+    from . import services
+  File "/home/root/KR/client/services.py", line 57
+    f"=now-7d&to=now&theme=dark&panelId={i}")
+                                            ^
+SyntaxError: unmatched ')'
+[2022-03-25 15:48:30 +0300] [26076] [INFO] Handling signal: term
+[2022-03-25 15:48:30 +0300] [26079] [INFO] Worker exiting (pid: 26079)
+[2022-03-25 15:48:30 +0300] [26078] [INFO] Worker exiting (pid: 26078)
+[2022-03-25 15:48:30 +0300] [26076] [INFO] Shutting down: Master
+[2022-03-25 15:48:30 +0300] [26086] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 15:48:30 +0300] [26086] [INFO] Listening at: http://127.0.0.1:8000 (26086)
+[2022-03-25 15:48:30 +0300] [26086] [INFO] Using worker: sync
+[2022-03-25 15:48:30 +0300] [26088] [INFO] Booting worker with pid: 26088
+[2022-03-25 15:48:30 +0300] [26089] [INFO] Booting worker with pid: 26089
+Not Found: /favicon.ico
+Forbidden (Origin checking failed - null does not match any trusted origins.): /client/
+[2022-03-25 15:56:13 +0300] [26086] [INFO] Handling signal: term
+[2022-03-25 15:56:13 +0300] [26089] [INFO] Worker exiting (pid: 26089)
+[2022-03-25 15:56:13 +0300] [26088] [INFO] Worker exiting (pid: 26088)
+[2022-03-25 15:56:14 +0300] [26086] [INFO] Shutting down: Master
+[2022-03-25 15:56:14 +0300] [26155] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 15:56:14 +0300] [26155] [INFO] Listening at: http://127.0.0.1:8000 (26155)
+[2022-03-25 15:56:14 +0300] [26155] [INFO] Using worker: sync
+[2022-03-25 15:56:14 +0300] [26157] [INFO] Booting worker with pid: 26157
+[2022-03-25 15:56:14 +0300] [26158] [INFO] Booting worker with pid: 26158
+[2022-03-25 15:57:16 +0300] [26155] [INFO] Handling signal: term
+[2022-03-25 15:57:16 +0300] [26158] [INFO] Worker exiting (pid: 26158)
+[2022-03-25 15:57:16 +0300] [26157] [INFO] Worker exiting (pid: 26157)
+[2022-03-25 15:57:16 +0300] [26155] [INFO] Shutting down: Master
+[2022-03-25 15:57:17 +0300] [26166] [INFO] Starting gunicorn 20.1.0
+[2022-03-25 15:57:17 +0300] [26166] [INFO] Listening at: http://127.0.0.1:8000 (26166)
+[2022-03-25 15:57:17 +0300] [26166] [INFO] Using worker: sync
+[2022-03-25 15:57:17 +0300] [26168] [INFO] Booting worker with pid: 26168
+[2022-03-25 15:57:17 +0300] [26169] [INFO] Booting worker with pid: 26169
+Forbidden (CSRF token from POST incorrect.): /client/
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /.env
+Not Found: /favicon.ico
+Not Found: /far.php
+Not Found: /echo.php
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /shell
+Not Found: /boaform/admin/formLogin
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Forbidden (Origin checking failed - https://multimer.ru does not match any trusted origins.): /client/
+Forbidden (Origin checking failed - https://multimer.ru does not match any trusted origins.): /client/
+Not Found: /favicon.ico
+Forbidden (Origin checking failed - https://multimer.ru does not match any trusted origins.): /client/
