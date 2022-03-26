@@ -26,6 +26,7 @@ def get_data(user):
     if user_id == 1:
         for client in User.objects.all():
             if client.id == 1:
+                print(1)
                 continue
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
