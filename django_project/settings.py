@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 
     'main.apps.MainConfig',
     'client.apps.ClientConfig',
-    #'pwa',
+    'pwa',
 
 ]
 
