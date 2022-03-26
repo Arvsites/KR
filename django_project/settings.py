@@ -114,9 +114,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-'''STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]'''
+
 
 # Cookies
 CSRF_TRUSTED_ORIGINS = ['https://multimer.ru', 'https://127.0.0.1']
@@ -125,33 +123,6 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 365 * 10
 # PWA
 PWA_APP_NAME = 'multimer'
 PWA_APP_DESCRIPTION = 'multimer'
-PWA_APP_THEME_COLOR = '#0A0302'
-PWA_APP_BACKGROUND_COLOR = '#ffffff'
-PWA_APP_DISPLAY = 'standalone'
-PWA_APP_SCOPE = '/'
-PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = '/'
-PWA_APP_STATUS_BAR_COLOR = 'default'
-PWA_APP_ICONS = [
-    {
-        'src': '/static/main/img/Logo.png',
-        'sizes': '160x160'
-    }
-]
-PWA_APP_ICONS_APPLE = [
-    {
-        'src': '/static/main/img/Logo.png',
-        'sizes': '160x160'
-    }
-]
-PWA_APP_SPLASH_SCREEN = [
-    {
-        'src': '/static/main/img/Logo.png',
-        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
-    }
-]
-PWA_APP_DIR = 'ltr'
-PWA_APP_LANG = 'ru-RU'
 
 try:
     from .local_settings import *
