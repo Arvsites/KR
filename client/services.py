@@ -28,7 +28,7 @@ def get_data(user):
             if client.id == 1:
                 continue
 
-            airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
+            airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             if airconds_count == 1:
                 for i in range(1, 4):
                     if user_id == 2:
