@@ -33,7 +33,7 @@ def get_data(user):
                 for i in range(1, 4):
                     if user_id == 2:
                         grafana_data_list.append(
-                            f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
+                            f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
                             f"=1&from"
                             f"=now-7d&to=now&theme=dark&panelId={i}")
 
@@ -41,7 +41,7 @@ def get_data(user):
                 for i in range(1, airconds_count * 3 + 1):
                     if user_id == 3:
                         grafana_data_list.append(
-                            f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
+                            f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
                             f"=1&from"
                             f"=now-7d&to=now&theme=dark&panelId={i}")
 
@@ -53,7 +53,7 @@ def get_data(user):
         for i in range(1, 4):
             if user_id == 2:
                 grafana_data_list.append(
-                    f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
+                    f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
                     f"=1&from"
                     f"=now-7d&to=now&theme=dark&panelId={i}")
 
@@ -61,7 +61,7 @@ def get_data(user):
         for i in range(1, airconds_count * 3 + 1):
             if user_id == 3:
                 grafana_data_list.append(
-                    f"http://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
+                    f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
                     f"=1&from"
                     f"=now-7d&to=now&theme=dark&panelId={i}")
 
