@@ -118,6 +118,10 @@ STATIC_URL = '/static/'
     os.path.join(BASE_DIR, 'static'),
 ]'''
 
+# Cookies
+CSRF_TRUSTED_ORIGINS = ['https://multimer.ru', 'https://127.0.0.1']
+
+
 # PWA
 
 PWA_APP_NAME = 'multimer'
