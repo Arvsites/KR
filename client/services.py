@@ -26,23 +26,22 @@ def get_data(user):
     if user_id == 1:
         for client in User.objects.all():
             if client.id == 1:
-                print(1)
                 continue
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             if airconds_count == 1:
                 for i in range(1, 4):
-                    if user_id == 2:
+                    if client.id == 2:
                         grafana_data_list.append(
-                            f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
+                            f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
                             f"=1&from"
                             f"=now-7d&to=now&theme=dark&panelId={i}")
 
             else:
                 for i in range(1, airconds_count * 3 + 1):
-                    if user_id == 3:
+                    if client.id == 3:
                         grafana_data_list.append(
-                            f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
+                            f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
                             f"=1&from"
                             f"=now-7d&to=now&theme=dark&panelId={i}")
 
