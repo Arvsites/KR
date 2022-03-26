@@ -123,9 +123,10 @@ CSRF_TRUSTED_ORIGINS = ['https://multimer.ru', 'https://127.0.0.1']
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 365 * 10
 
 # PWA
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
 
 PWA_APP_NAME = 'multimer'
-PWA_APP_DESCRIPTION = "multimer"
+PWA_APP_DESCRIPTION = 'multimer'
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
