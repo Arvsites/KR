@@ -10,5 +10,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('client/', include('client.urls')),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'))),
-    path('sw,js', RedirectView.as_view(url=staticfiles_storage.url('fsw.js'))),
+    path('sw.js', RedirectView.as_view(url=staticfiles_storage.url('fsw.js'))),
 ]
