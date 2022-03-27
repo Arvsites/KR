@@ -19,7 +19,7 @@
    "density": "1.0"
   },
   {
-   "src": "\/android-icon-72x72.png",
+   "src": "static\/pwa-images\/android-icon-72x72.png",
    "sizes": "72x72",
    "type": "image/png",
    "density": "1.5"
