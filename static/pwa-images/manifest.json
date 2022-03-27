@@ -5,6 +5,7 @@
  "start_url": "/",
  "display": "standalone",
  "theme_color": "#34383D",
+ "background_color": "#34383D",
  "icons": [
   {
    "src": "https://multimer.ru/static/pwa-images/android-icon-192x192.png",
