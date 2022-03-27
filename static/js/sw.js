@@ -1,4 +1,10 @@
-'use strict';
-importScripts('/static/js/sw-toolbox.js.map');
-toolbox.router.get('/static/pwa-images/*', toolbox.cacheFirst);
-toolbox.router.get('/*', toolbox.networkFirst, { networkTimeoutSeconds: 5});
+function registerServiceWorker() {
+// регистрирует скрипт sw в поддерживаемых браузерах
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('https://multimer.ru/static/js/sw.js', { scope: '/' }).then(() => {
+      console.log('Service Worker registered successfully.');
+    }).catch(error => {
+      console.log('Service Worker registration failed:', error);
+    });
+  }
+}
