@@ -118,7 +118,6 @@ STATIC_URL = '/static/'
 
 # Cookies
 CSRF_TRUSTED_ORIGINS = ['https://multimer.ru', 'https://127.0.0.1']
-SESSION_COOKIE_AGE = 60 * 60 * 24 * 365 * 10
 
 
 try:
