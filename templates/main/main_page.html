@@ -30,17 +30,15 @@
 </head>
 
 <script>
+function registerServiceWorker() {
+// регистрирует скрипт sw в поддерживаемых браузерах
 if ('serviceWorker' in navigator) {
- window.addEventListener('load', function() {
-   navigator.serviceWorker.register("{% static '/js/sw.js' %}").then(
-     function(registration) {
-       // Registration was successful
-       console.log('ServiceWorker registration successful with scope: ', registration.scope); },
-     function(err) {
-       // registration failed :(
-       console.log('ServiceWorker registration failed: ', err);
-     });
- });
+    navigator.serviceWorker.register('https://multimer.ru/static/js/sw.js', { scope: '/' }).then(() => {
+      console.log('Service Worker registered successfully.');
+    }).catch(error => {
+      console.log('Service Worker registration failed:', error);
+    });
+  }
 }
 
 </script>
