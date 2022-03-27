@@ -28,6 +28,22 @@
     <meta name="msapplication-TileImage" content="{% static '/pwa-images/ms-icon-144x144.png' %}">
     <meta name="theme-color" content="#34383D">
 </head>
+
+<script>
+if ('serviceWorker' in navigator) {
+ window.addEventListener('load', function() {
+   navigator.serviceWorker.register("{% static '/js/sw.js' %}").then(
+     function(registration) {
+       // Registration was successful
+       console.log('ServiceWorker registration successful with scope: ', registration.scope); },
+     function(err) {
+       // registration failed :(
+       console.log('ServiceWorker registration failed: ', err);
+     });
+ });
+}
+
+</script>
 <body>
     <div id="welcome">
         <img alt="it_kvant" src="{% static '/main/img/Logo.png' %}" id='logo'>
