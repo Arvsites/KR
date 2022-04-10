@@ -17,23 +17,11 @@ def signin(request, username, password):
         return 'user not found'
 
 
-def days_to_show(days: int):
-    if days == 1:
-        return 'now-1d'
-    if days == 7:
-        return 'now-7d'
-
-
-def get_data(user, days=''):
+def get_data(user):
     grafana_links_parts = {'user2': 'O3upqisnk', 'user3': '_Is_3msnk'}
     """Get data for showing grafana graphics"""
     user_id = user.id
     grafana_data_list = []
-
-    if days:
-        days_link = days_to_show(days)
-    else:
-        days_link = 'now-7d'
 
     if user_id == 1:
         for client in User.objects.all():
@@ -47,7 +35,7 @@ def get_data(user, days=''):
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
                             f"=1&from"
-                            f"={days_link}&to=now&theme=dark&panelId={i}")
+                            f"=now-7d&to=now&theme=dark&panelId={i}")
 
             else:
                 for i in range(1, airconds_count * 3 + 1):
@@ -55,7 +43,7 @@ def get_data(user, days=''):
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
                             f"=1&from"
-                            f"={days_link}&to=now&theme=dark&panelId={i}")
+                            f"=now-7d&to=now&theme=dark&panelId={i}")
 
         return grafana_data_list
 
@@ -67,7 +55,7 @@ def get_data(user, days=''):
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
                     f"=1&from"
-                    f"={days_link}&to=now&theme=dark&panelId={i}")
+                    f"=now-7d&to=now&theme=dark&panelId={i}")
 
     else:
         for i in range(1, airconds_count * 3 + 1):
@@ -75,6 +63,6 @@ def get_data(user, days=''):
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
                     f"=1&from"
-                    f"={days_link}&to=now&theme=dark&panelId={i}")
+                    f"=now-7d&to=now&theme=dark&panelId={i}")
 
     return grafana_data_list
