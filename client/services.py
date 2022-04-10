@@ -35,7 +35,7 @@ def get_data(user):
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
                             f"=1&from"
-                            f"=now-7d&to=now&theme=dark&panelId={i}")
+                            f"=now-1d&to=now&theme=dark&panelId={i}")
 
             else:
                 for i in range(1, airconds_count * 3 + 1):
@@ -43,7 +43,7 @@ def get_data(user):
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
                             f"=1&from"
-                            f"=now-7d&to=now&theme=dark&panelId={i}")
+                            f"=now-1d&to=now&theme=dark&panelId={i}")
 
         return grafana_data_list
 
@@ -55,7 +55,7 @@ def get_data(user):
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
                     f"=1&from"
-                    f"=now-7d&to=now&theme=dark&panelId={i}")
+                    f"=now-1d&to=now&theme=dark&panelId={i}")
 
     else:
         for i in range(1, airconds_count * 3 + 1):
@@ -63,6 +63,6 @@ def get_data(user):
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
                     f"=1&from"
-                    f"=now-7d&to=now&theme=dark&panelId={i}")
+                    f"=now-1d&to=now&theme=dark&panelId={i}")
 
     return grafana_data_list
