@@ -18,4 +18,4 @@ def login(request):
     password = request.POST.get('password')
 
     services.signin(request, username, password)
-    client_page(request)
+    return client_page(request)
