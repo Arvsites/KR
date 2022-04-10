@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from . import services
 
 
-def client_page(request, day=''):
+def client_page(request, days_to_show=''):
     user = request.user
-    grafana_data = services.get_data(user, days=day)
+    grafana_data = services.get_data(user, days=days_to_show)
     return render(request, 'client/client.html', {'user': user, 'grafana_data': grafana_data})
 
 
