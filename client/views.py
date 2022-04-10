@@ -4,17 +4,18 @@ from . import services
 
 
 def client_page(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-
-    user = services.signin(request, username, password)
-
-    if isinstance(user, str):
-        return HttpResponse(user)
-    else:
-        grafana_data = services.get_data(user)
-        return render(request, 'client/client.html', {'user': user, 'grafana_data': grafana_data})
+    user = request.user
+    grafana_data = services.get_data(user)
+    return render(request, 'client/client.html', {'user': user, 'grafana_data': grafana_data})
 
 
 def login_page(request):
     return render(request, 'client/login.html')
+
+
+def login(request):
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+
+    services.signin(request, username, password)
+    client_page(request)

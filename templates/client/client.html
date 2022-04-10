@@ -18,6 +18,10 @@
         	<div class="errors">
         		<p>Ошибки отсутствуют</p>
         	</div>
+            <div>
+                <a href="">показать данные за 7 дней</a>
+                <a href="">показать данные за 1 день</a>
+            </div>
 			{% for data in grafana_data %}
 				<iframe src="{{ data }}" width="1080" height="590" frameborder="0"></iframe>
 			{% endfor %}
