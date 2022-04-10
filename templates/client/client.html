@@ -19,8 +19,8 @@
         		<p>Ошибки отсутствуют</p>
         	</div>
             <div>
-                <a href="">показать данные за 7 дней</a><br>
-                <a href="">показать данные за 1 день</a>
+                <a href="{% url 'client:client_page' days_to_show=7 %}">показать данные за 7 дней</a><br>
+                <a href="{% url 'client:client_page' days_to_show=1 %}">показать данные за 1 день</a>
             </div>
 			{% for data in grafana_data %}
 				<iframe src="{{ data }}" width="1080" height="590" frameborder="0"></iframe>
