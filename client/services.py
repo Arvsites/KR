@@ -33,7 +33,7 @@ def get_data(user, days=''):
     if days:
         days_to_show = get_days_link(days)
     else:
-        days_to_show = 'now-7d'
+        days_to_show = 'now-1d'
 
     if user_id == 1:
         for client in User.objects.all():
