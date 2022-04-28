@@ -13,6 +13,9 @@ class Airconddata(models.Model):
     t5 = models.SmallIntegerField(blank=True, null=True)
     pressure = models.SmallIntegerField(blank=True, null=True)
     current = models.SmallIntegerField(blank=True, null=True)
+
     client = models.ForeignKey(User, on_delete=models.CASCADE)
+    telegram_chat_id = models.BigIntegerField(blank=True, null=True)
+
     cond_id = models.SmallIntegerField(blank=True, null=True)
     airconds_count = models.SmallIntegerField(blank=True, null=True)
