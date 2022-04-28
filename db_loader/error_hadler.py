@@ -49,7 +49,7 @@ broker_address = "37.140.197.191"
 client = mqtt.Client("error_sender")
 client.username_pw_set("KR", "MCiZmQFqf7")
 
-client.connect(broker_address)
+client.connect(broker_address, port=1883)
 
 
 def publish_errors(errors: list):
