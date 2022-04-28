@@ -1,4 +1,3 @@
-#!/root/.local/share/virtualenvs/venv-17fYImAv/bin/python3
 import json
 import paho.mqtt.client as mqtt
 import psycopg2
@@ -16,15 +15,15 @@ def on_message(client, userdata, message):
     message_payload = str(message.payload.decode("utf-8"))
 
 
-broker_address = "37.140.197.191"
+broker_address = "194.67.121.74"
 
 
 def receive(receiver, aircond_num: str):
     """receives data from airconds"""
-    receiver.connect(broker_address)
+    receiver.connect(broker_address, 1883)
     receiver.loop_start()
 
-    receiver.subscribe(f"/device{aircond_num}")
+    receiver.subscribe(f"/dev{aircond_num}")
     time.sleep(4)
     receiver.loop_stop()
 
@@ -36,7 +35,8 @@ def receive(receiver, aircond_num: str):
 
 
 # mqtt client
-client = mqtt.Client("receiver")
+client = mqtt.Client("receiver3")
+client.username_pw_set("KR", "MCiZmQFqf7")
 client.on_message = on_message
 
 # postgres client
@@ -48,7 +48,7 @@ def load_data(aircond_num: str):
     try:
         data = ast.literal_eval(receive(client,aircond_num))
         print(data)
-        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 3, {data['i1']}, 6, 2)")
+        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 3, {data['i1']}, 3, 2)")
         conn.commit()
     except ValueError:
         pass
