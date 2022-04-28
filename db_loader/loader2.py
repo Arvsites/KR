@@ -8,7 +8,7 @@ import ast
 import time
 
 # error_handler
-from . import error_hadler
+import error_hadler
 
 message_payload = ''
 
