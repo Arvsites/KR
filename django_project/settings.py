@@ -19,8 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Application definition
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '37.140.197.191', '2a00:f940:2:4:2::2619', '37-140-197-191.cloudvps.regruhosting.ru',
-                 'multimer.ru']
+ALLOWED_HOSTS = ['localhost', '194.58.96.174', '2a00:f940:2:4:2::5a3', 'multimer.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -73,8 +72,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'kr',
-        'USER': 'postgres',
-        'PASSWORD': 'FjhfNB693>M',
+        'USER': 'db_admin',
+        'PASSWORD': '*kau>FS8Nvu>bM#R',
         'HOST': 'localhost',
         'PORT': '5432',
     }
