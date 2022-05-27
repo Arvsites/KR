@@ -42,7 +42,7 @@ def get_data(user, days=''):
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             if airconds_count == 1:
-                for i in range(1, 4):
+                for i in range(1, 3):
                     if client.id == 2:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
@@ -50,7 +50,7 @@ def get_data(user, days=''):
                             f"={days_to_show}to=now&theme=dark&panelId={i}")
 
             else:
-                for i in range(1, airconds_count * 3 + 1):
+                for i in range(1, airconds_count * 2 + 1):
                     if client.id == 3:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
