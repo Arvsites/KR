@@ -25,7 +25,7 @@ def get_days_link(days):
 
 
 def get_data(user, days=''):
-    grafana_links_parts = {'user2': 'O3upqisnk', 'user3': '_Is_3msnk'}
+    grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'}
     """Get data for showing grafana graphics"""
     user_id = user.id
     grafana_data_list = []
@@ -46,7 +46,7 @@ def get_data(user, days=''):
                     if client.id == 2:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
-                            f"=1&from"
+                            f"=2&from"
                             f"={days_to_show}to=now&theme=dark&panelId={i}")
 
             else:
@@ -54,7 +54,7 @@ def get_data(user, days=''):
                     if client.id == 3:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
-                            f"=1&from"
+                            f"=2&from"
                             f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
         return grafana_data_list
@@ -62,11 +62,11 @@ def get_data(user, days=''):
     airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
 
     if airconds_count == 1:
-        for i in range(1, 4):
+        for i in range(1, 3):
             if user_id == 2:
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
-                    f"=1&from"
+                    f"=2&from"
                     f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
     else:
@@ -74,7 +74,7 @@ def get_data(user, days=''):
             if user_id == 3:
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
-                    f"=1&from"
+                    f"=2&from"
                     f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
     return grafana_data_list
