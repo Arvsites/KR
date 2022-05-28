@@ -1,5 +1,7 @@
 import paho.mqtt.client as mqtt
 
+import config
+
 
 # check data
 MAX_VALUES = {
@@ -44,12 +46,12 @@ def analyze_data(data: dict):
 
 
 # send data
-broker_address = "37.140.197.191"
+broker_address = config.BROKER_ADDRESS
 
 client = mqtt.Client("error_sender")
-client.username_pw_set("KR", "MCiZmQFqf7")
+client.username_pw_set(config.BROKER_LOGIN, config.BROKER_PASSWORD)
 
-client.connect(broker_address, port=1883)
+client.connect(broker_address, port=config.BROKER_PORT)
 
 
 def publish_errors(errors: list):
