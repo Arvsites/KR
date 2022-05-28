@@ -47,7 +47,7 @@ def get_data(user, days=''):
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
                             f"=2&from"
-                            f"={days_to_show}to=now&theme=dark&panelId={i}")
+                            f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
             else:
                 for i in range(1, airconds_count * 2 + 1):
