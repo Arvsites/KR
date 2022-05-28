@@ -27,7 +27,7 @@ broker_address = config.BROKER_ADDRESS
 
 def receive(receiver, aircond_num: str):
     """receives data from airconds"""
-    receiver.connect(broker_address, port=1883)
+    receiver.connect(broker_address, port=config.BROKER_PORT)
     receiver.loop_start()
 
     receiver.subscribe(f"/device{aircond_num}")
