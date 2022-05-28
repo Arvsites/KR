@@ -49,7 +49,7 @@ client.on_message = on_message
 
 # postgres client
 conn = psycopg2.connect(host=config.DATABASE_HOST, port=config.DATABASE_PORT, user=config.DATABASE_LOGIN,
-                        password=config.DATABASE_PASSWORD, dbname=CONFIG.DATABASE_NAME)
+                        password=config.DATABASE_PASSWORD, dbname=config.DATABASE_NAME)
 cur = conn.cursor()
 
 
