@@ -57,6 +57,7 @@ cur = conn.cursor()
 def load_data(aircond_num: str):
     try:
         data = ast.literal_eval(receive(client, aircond_num))
+        data['telegram_chat_id'] = 811039053
         print("got data")
         errors = error_hadler.analyze_data(data)
         if errors:
