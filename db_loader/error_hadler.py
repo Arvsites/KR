@@ -56,5 +56,5 @@ def publish_errors(errors: list) :
     # errors type - [telegram_chat_id, [errors]]
     for error in errors[1] :
         print("sending error")
-        error_message = dict(str(errors[0])=error)
+        error_message = {str(errors[0]): error}
         client.publish("/errors", str(error_message))
