@@ -20,7 +20,7 @@ def receive(receiver):
     receiver.connect(broker_address, port=config.BROKER_PORT)
     receiver.loop_start()
 
-    receiver.subscribe("erorrs")
+    receiver.subscribe("/erorrs")
     time.sleep(4)
     receiver.loop_stop()
 

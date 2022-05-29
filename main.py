@@ -16,14 +16,14 @@ dp = Dispatcher(bot)
 
 
 @dp.message_handler(commands=['start', 'help'])
-async def send_welcome(message: types.Message) :
+async def send_welcome(message: types.Message):
     """Hello message"""
     await message.reply("Здравствуйте! Этот бот создан для отправки ошибок с  вашего устройства.\n"
                         "Бот уже привязал ваш аккаунт к кондиционеру и успешно работает.")
 
 
 @dp.message_handler()
-async def echo(message: types.Message) :
+async def echo(message: types.Message):
     await message.answer(f"Этот бот не принимает сообщения, он отправляет ошибки устройств.")
 
 
