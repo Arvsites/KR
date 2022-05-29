@@ -42,7 +42,7 @@ def receive(receiver, aircond_num: str):
 
 
 # mqtt client
-client = mqtt.Client("receiver")
+client = mqtt.Client("receiver1")
 client.username_pw_set(config.BROKER_LOGIN, config.BROKER_PASSWORD)
 
 client.on_message = on_message
