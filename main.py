@@ -29,7 +29,7 @@ async def echo(message: types.Message):
 
 async def send_error():
     """Send error message"""
-    while True :
+    while True:
         error = er.receive(er.client)
         if error:
             for i in error:  # error is {telegram_id:error_message}
@@ -37,7 +37,7 @@ async def send_error():
 
 
 async def on_startup(x):
-    asyncio.create_task(is_enabled())
+    asyncio.create_task(send_error())
 
 
 if __name__ == '__main__':
