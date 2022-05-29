@@ -31,13 +31,10 @@ def analyze_data(data: dict):
     errors = []
 
     for key in data.keys():
-        n = 1
-
         if key == 'time' or key == 'cond_id' or key == 'client_id' or key == 'client_id' or key == 'telegram_chat_id' or key == 'airconds_count':
             continue
-        if data[key] > MAX_VALUES[key] or data[key] < MIN_VALUES[key]:
+        if int(data[key]) > MAX_VALUES[key] or int(data[key]) < MIN_VALUES[key]:
             errors.append(f'Датчик {key} выдал аномальное значение {data[key]}! Проверьте, всё ли в порядке.')
-        n += 1
 
     if not errors:
         return
