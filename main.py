@@ -34,8 +34,7 @@ async def send_error():
         error = er.receive(er.client)
         if error:
             for i in error:  # error is {telegram_id:error_message}
-                print(error[i], error[i])
-                await bot.send_message(chat_id=error[i], text=error[i])
+                await bot.send_message(chat_id=i, text=error[i])
         else:
             await bot.send_message(chat_id=811039053, text="no errors")
 
