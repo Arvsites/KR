@@ -57,4 +57,4 @@ def publish_errors(errors: list) :
     for error in errors[1] :
         print("sending error")
         error_message = dict(str(errors[0])=error)
-        client.publish("/errors", str(str(errors[0]) : {error}))
+        client.publish("/errors", str(error_message))
