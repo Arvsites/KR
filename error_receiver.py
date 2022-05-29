@@ -29,7 +29,7 @@ def receive(receiver):
     if message_payload != '':
         return ast.literal_eval(message_payload)
     else:
-        pass
+        return None
 
 
 # Setting up an mqtt client
