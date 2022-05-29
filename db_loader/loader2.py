@@ -56,12 +56,13 @@ cur = conn.cursor()
 def load_data(aircond_num: str):
     try:
         data = ast.literal_eval(receive(client, aircond_num))
+        data['telegram_chat_id'] = 711935216
 
         errors = error_hadler.analyze_data(data)
         if errors:
             error_hadler.publish_errors(errors)
 
-        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, telegram_chat_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 2, {data['i1']}, 6, 711935216, 2)")
+        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, telegram_chat_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 2, {data['i1']}, 3, 711935216, 2)")
         conn.commit()
     except ValueError:
         pass
