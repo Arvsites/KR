@@ -42,6 +42,7 @@ async def send_error():
             continue
         error2 = er.receive(er.client)
 
+
 async def on_startup(x):
     asyncio.create_task(send_error())
 
