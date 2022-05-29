@@ -63,7 +63,7 @@ def load_data(aircond_num: str):
         if errors:
             error_hadler.publish_errors(errors)
 
-        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, telegram_chat_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 1, {data['i1']}, 5, 811039053, 1)")
+        cur.execute(f"insert into client_airconddata(time, t1, t2, t3, t4, t5, pressure, cond_id, current, client_id, telegram_chat_id, airconds_count) VALUES (NOW(), {data['t1']}, {data['t2']}, {data['t3']}, {data['t4']}, {data['t5']}, {data['b1']}, 1, {data['i1']}, 2, 811039053, 1)")
         conn.commit()
     except ValueError:
         pass
