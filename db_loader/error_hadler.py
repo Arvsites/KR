@@ -58,4 +58,4 @@ def publish_errors(errors: list):
     """Publish errors to mqtt broker"""
     # errors type - [telegram_chat_id, [errors]]
     for error in errors[1]:
-        client.publish("errors", {errors[telegram_chat_id]: error})
+        client.publish("/errors", {errors[telegram_chat_id]: error})
