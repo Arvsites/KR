@@ -30,14 +30,17 @@ async def echo(message: types.Message):
 
 async def send_error():
     """Send error message"""
+    error2 = None
     while True:
         error = er.receive(er.client)
-        if error:
+        # If you use paho-mqtt, it will send the message immortally, so here we check if the message repeats to avoid
+        # sending the same message to the same user
+        if error != error2:
             for i in error:  # error is {telegram_id:error_message}
                 await bot.send_message(chat_id=i, text=error[i])
         else:
-            await bot.send_message(chat_id=811039053, text="no errors")
-
+            continue
+        error2 = er.receive(er.client)
 
 async def on_startup(x):
     asyncio.create_task(send_error())
