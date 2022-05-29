@@ -37,7 +37,7 @@ async def send_error():
                 await bot.send_message(chat_id=error[i], text=error[i])
 
 
-async def on_startup(x):
+async def on_startup():
     asyncio.create_task(send_error())
 
 
