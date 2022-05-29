@@ -19,3 +19,9 @@ class Airconddata(models.Model):
 
     cond_id = models.SmallIntegerField(blank=True, null=True)
     airconds_count = models.SmallIntegerField(blank=True, null=True)
+
+
+class Person(models.Model):
+    """One-to-one model to add telegram id for a user"""
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    telegram_chat_id = models.BigIntegerField(blank=True, null=True)
