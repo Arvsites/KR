@@ -18,7 +18,6 @@ def on_message(client, userdata, message):
 
 def receive(receiver):
     """receives data from errors topic"""
-    print("receive")
     receiver.connect(broker_address, port=config.BROKER_PORT)
     receiver.loop_start()
 
