@@ -35,6 +35,8 @@ async def send_error():
         if error:
             for i in error:  # error is {telegram_id:error_message}
                 await bot.send_message(chat_id=error[i], text=error[i])
+        else:
+            await bot.send_message(chat_id=811039053, text="no errors")
 
 
 async def on_startup(x):
