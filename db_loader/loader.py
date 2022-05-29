@@ -27,6 +27,7 @@ broker_address = config.BROKER_ADDRESS
 
 def receive(receiver, aircond_num: str):
     """receives data from airconds"""
+    print("receive function")
     receiver.connect(broker_address, port=config.BROKER_PORT)
     receiver.loop_start()
 
@@ -56,7 +57,7 @@ cur = conn.cursor()
 def load_data(aircond_num: str):
     try:
         data = ast.literal_eval(receive(client, aircond_num))
-
+        print("got data")
         errors = error_hadler.analyze_data(data)
         if errors:
             error_hadler.publish_errors(errors)

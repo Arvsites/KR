@@ -28,6 +28,7 @@ MIN_VALUES = {
 def analyze_data(data: dict):
     """Analyzes data from sensors and detects if there any errors. If some value is more than MAX_VALUE or less than
     MIN_VALUES """
+    print("analyze data")
     errors = []
 
     for key in data.keys():
@@ -39,7 +40,7 @@ def analyze_data(data: dict):
     if not errors:
         return
 
-    return [errors, data['telegram_chat_id']]
+    return [data['telegram_chat_id'], errors]
 
 
 # send data
@@ -55,4 +56,5 @@ def publish_errors(errors: list):
     """Publish errors to mqtt broker"""
     # errors type - [telegram_chat_id, [errors]]
     for error in errors[1]:
-        client.publish("/errors", {errors[telegram_chat_id]: error})
+        print("sending error")
+        client.publish("/errors", {errors[0]: error})
