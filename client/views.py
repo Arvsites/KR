@@ -17,4 +17,6 @@ def login(request):
     password = request.POST.get('password')
 
     user = services.signin(request, username, password)
+    if isinstance(user, str):
+        return HttpResponse(user)
     return client_page(request, user)
