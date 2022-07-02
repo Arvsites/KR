@@ -4,7 +4,7 @@ from . import services
 
 
 def client_page(request, days_to_show=''):
-    grafana_data = services.get_data(user, days=days_to_show)
+    grafana_data = services.get_data(request.user, days=days_to_show)
     return render(request, 'client/client.html', {'user': user, 'grafana_data': grafana_data})
 
 
