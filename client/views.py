@@ -19,4 +19,5 @@ def login(request):
     user = services.signin(request, username, password)
     if isinstance(user, str):
         return HttpResponse(user)
-    return client_page(request, user)
+
+    return client_page(request)
