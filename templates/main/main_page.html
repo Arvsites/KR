@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 {% load static %}
 {% load pwa %}
-<head>
-    {% progressive_web_app_meta %}
-    <meta charset="UTF-8">
-    <title>Добро пожаловать!</title>
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
-    <base href="https://multimer.ru/static/">
-    <link rel="stylesheet" type="text/css" href="{% static '/main/css/main.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <div id="welcome">
-        <img alt="it_kvant" src="{% static '/main/img/Logo.png' %}" id='logo'>
-        <span id='hello'>Добро пожаловать!</span>
-        <a href="{% url 'client:login_page' %}" class='reg'>авторизоваться</a>
-    </div>
-</body>
+    <head>
+        {% progressive_web_app_meta %}
+        <meta charset="UTF-8">
+        <title>Добро пожаловать!</title>
+        <base href="https://multimer.ru/static/">
+        <link rel="stylesheet" href="{% static '/main/css/main.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    </head>
+    <body>
+        <div id="wrapper">
+        <div id="logo">
+            <img src="{% static '/main/img/logo.png' %}" >
+        </div>
+        <div id="main_text">Добро пожаловать!</div>
+        <a href="{% url 'client:login_page' %}" class="button">АВТОРИЗОВАТЬСЯ</a>
+        </div>
+    </body>
 </html>
