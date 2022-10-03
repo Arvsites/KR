@@ -9,11 +9,12 @@
         <base href="https://multimer.ru/static/">
         <link rel="stylesheet" href="{% static '/main/css/main.css' %}">
         <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="wrapper">
         <div id="logo">
-            <img src="{% static '/main/img/Logo.png' %}" >
+            <img src="{% static '/main/img/logo.png' %}" >
         </div>
         <div id="main_text">Добро пожаловать!</div>
         <a href="{% url 'client:login_page' %}" class="button">АВТОРИЗОВАТЬСЯ</a>
