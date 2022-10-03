@@ -1,31 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'client/css/client.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-    <title>Личный кабинет</title>
-</head>
-<body>
-    <header>
-        <p>Здравствуйте, {{ user.username }}, ваш user id- {{ user.id }}</p>
-    </header>
-    <div id='airconds'>
-        <div class="aircond_data">
-        	<div class="errors">
-        		<p>Ошибки отсутствуют</p>
-        	</div>
-            <div>
-                <a href="{% url 'client:client_page' days_to_show=7 %}">показать данные за 7 дней</a><br>
-                <a href="{% url 'client:client_page' days_to_show=1 %}">показать данные за 1 день</a>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'client/css/client.css' %}">
+        <title>Личный кабинет</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.ico" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <img id="logo_img" src="img/logo_img.png" >
+                <img id="logo_text" src="img/logo_text.png">
             </div>
-			{% for data in grafana_data %}
-				<iframe src="{{ data }}" width="1080" height="590" frameborder="0"></iframe>
-			{% endfor %}
+            <div id="user">
+                <div id="user_info">
+                    <div>{{ user.username }}</div>
+                    <div>{{ user.id }}</div>
+                </div>
+                <a href="index.html" class="button">ВЫЙТИ</a>
+            </div>    
         </div>
-    </div>
-</body>
+        <div id='body'>
+            <div id="interface">
+                <!-- <div id="errors">Ошибки отсутствуют</div> -->
+                <div id="buttons">
+                    <a href="{% url 'client:client_page' days_to_show=7 %}" class="button">ПОКАЗАТЬ ДАННЫЕ ЗА 7 ДНЕЙ</a>
+                    <a href="{% url 'client:client_page' days_to_show=1 %}" class="button">ПОКАЗАТЬ ДАННЫЕ ЗА 1 ДЕНЬ</a>
+                </div>
+            </div>
+            <div id="chart">
+                {% for data in grafana_data %}
+                    <div class="grafana">
+                        <iframe src="{{ data }}" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>   
+                {% endfor %}
+            </div>
+        </div>
+    </body>
 </html>
