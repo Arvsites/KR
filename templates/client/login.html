@@ -1,20 +1,25 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Авторизация</title>
-    <link rel="stylesheet" href="{% static 'client/css/login.css' %}">
-</head>
-<body>
-    <div id="wrapper">
-        <h1 id="login_header">Авторизация</h1>
-        <form id="signin" method="post" action="{% url 'client:login' %}">
-            {% csrf_token %}
-            <input type="text" id="user" placeholder="логин" name="username"/>
-            <input type="password" id="pass" placeholder="пароль" name="password"/>
-            <button type="submit">&#xf0da;</button>
-        </form>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Авторизация</title>
+        <link rel="stylesheet" href="{% static 'client/css/login.css' %}">
+        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.ico" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="logo">
+                <img src="{% static '/main/img/logo.png' %}" >
+            </div>
+            <!-- <div id="main_text">Авторизация</div> -->
+            <form id="signin_form" method="post" action="{% url 'client:login' %}">
+                {% csrf_token %}
+                <input type="text" id="user" placeholder="ЛОГИН" name="username"/>
+                <input type="password" id="pass" placeholder="ПАРОЛЬ" name="password"/>
+                <button type="submit" class="button">АВТОРИЗОВАТЬСЯ</button>
+            </form>
+        </div>
+    </body>
 </html>
