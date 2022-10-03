@@ -1,104 +1,84 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
-
-*{
-	font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
-}
-body{
-    background: rgb(52, 56, 61);
-	padding: 80px;
-}
-h1{
-	color: rgb(255, 255, 255);
-	text-align: center;
-	margin: 20px auto;
-}
-#wrapper{
-	position: absolute;
-	width: 320px;
-	left: 50%;
-	margin-left: -160px;
-	top: 50%;
-	margin-top: -75px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/* === Sign in Form === */
-#signin {
-	height: 90px;
-	width: 300px;
-	border-radius: 8px;
-	position: relative;
-}
-#signin::before {
-	display: block;
-	position: relative;
-	height: 2px;
-	background: rgb(52, 56, 61);
-	content: '';
-	top: 44px;
-	margin-left: 20px;
-	z-index: 1;
-}
-#signin input:first-of-type{
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px;
-}
-#signin input:last-of-type{
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px;
-}
-#signin  input[type="text"], #signin  input[type="password"], #signin button[type="submit"]{
-	background: rgb(28, 30, 33);
-	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
-	color: rgb(52, 56, 61);
-}
-#signin  input[type="text"], #signin  input[type="password"]{
-	position: relative;
-	display: block;
-	width: 280px;
-	height: 45px;
-	border: 0;
-	outline: 0;
-	top: -2px;
-	padding: 0 0 0 20px;
-	font-weight: 700;
-	font-size: 20px;
-}
-#signin  input[type="text"]:focus, #signin  input[type="password"]:focus{
-	color: rgb(255, 255, 255);
-}
-#signin button[type="submit"]{
-	display: block;
-	position: absolute;
-	width: 52px;
-	height: 52px;
-	color: rgb(52, 56, 61);
-	border-radius: 50px;
-	outline: 0;
-	z-index: 2;
-	top: 19px;
-	right: -24px;
-	border: 6px solid rgb(52, 56, 61);
-	font-size: 25px;
-	text-indent: 0px;
-	padding-left: 9px;
-	padding-bottom: 3px;
-	text-align: center;
-}
-#signin button[type="submit"]:hover{
-	color: rgb(0, 126, 165);
-	text-shadow: 0 0 10px rgb(0, 126, 165);
-	cursor: pointer;
-}
-#signin a {
-	color: rgb(111, 119, 135);
-	text-decoration: none;
-	padding: 0 20px;
-	font-weight: 700;
-	font-size: 15px;
-	margin: 5px 0 0 0;
+body {
+  background: #211717;
 }
 
-#signin a:hover{
-	border-bottom: 1px solid;
+#wrapper {
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*#main_text{
+      margin-bottom: 2vh;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      color: #E6E4E4;
+  }*/
+}
+#wrapper #logo {
+  margin-bottom: 2vh;
+  max-width: 30vw;
+}
+#wrapper #logo img {
+  width: 100%;
+}
+#wrapper #signin_form {
+  display: flex;
+  flex-direction: column;
+}
+#wrapper #signin_form input {
+  margin-bottom: 1vh;
+  background-color: #E6E4E4;
+  color: #211717;
+  box-shadow: inset -100px -100px 0 #E6E4E4;
+  text-align: center;
+  padding: 15px 25px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.button {
+  background-color: #211717;
+  color: #E6E4E4;
+  text-decoration: solid;
+  position: relative;
+  text-align: center;
+  padding: 15px 25px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.button::before {
+  content: "";
+  background-color: #211717;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.button:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.button:hover::before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
 }
