@@ -124,7 +124,7 @@ body {
   border-image-slice: 1;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 560px) {
   #logo_text {
     display: none;
   }
