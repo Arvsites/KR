@@ -19,7 +19,7 @@
                     <div>Имя: {{ user.username }}</div>
                     <div>ID: {{ user.id }}</div>
                 </div>
-                <a href="index.html" class="button">ВЫЙТИ</a>
+                <a href="index.html" class="button" onclick="delCookies()">ВЫЙТИ</a>
             </div>    
         </div>
         <div id='body'>
@@ -38,5 +38,7 @@
                 {% endfor %}
             </div>
         </div>
+        
+        <script src="{% static 'client/js/login.js' %}"></script>
     </body>
 </html>
