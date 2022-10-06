@@ -1,10 +1,9 @@
-function delCookies(e){
-  if (e.target.tagName === 'A'){
-    console.log(e.target.href);
-    e.preventDefault();          
-         
-      /*  реализуете свою логику  */
+function delCookies(params) {
+    let user = " ";
+    let pass = " ";
 
-    window.location.href = e.target.href;
-  }
+    document.cookie = `username=${user}; path=/; max-age=0;`;
+    document.cookie = `password=${pass}; path=/; max-age=0;`;
+    alert(document.cookie);
+    window.location.href = 'https://ya.ru';
 }
