@@ -19,7 +19,8 @@
                     <div>Имя: {{ user.username }}</div>
                     <div>ID: {{ user.id }}</div>
                 </div>
-                <a class="button" id="exit_button" href='{% url 'client:logout' %}'>ВЫЙТИ</a>
+                <div class="button" onclick="delCookies()"> ВЫЙТИ </div>
+                <a id="hidden_button" style="display: none;" href='{% url 'client:logout' %}'></a>
             </div>    
         </div>
         <div id='body'>
