@@ -1,6 +1,6 @@
 let workingHref = document.getElementById("hidden_button");
 
-function delCookies(event) {
+function delCookies() {
     alert(workingHref.href);
          
     document.cookie = `username=${user}; path=/; max-age=0;`;
