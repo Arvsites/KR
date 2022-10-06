@@ -8,5 +8,4 @@ function delCookies() {
     document.cookie = `password=${pass}; path=/; max-age=0;`;
       
     //window.location.href = event.target.href;
-    }
 }
