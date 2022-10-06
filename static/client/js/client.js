@@ -1,14 +1,11 @@
-let exit = document.getElementById("exit_button");
-exit.addEventListener('click', delCookies, false)
-exit.preventDefault();
+let workingHref = document.getElementById("hidden_button");
 
 function delCookies(event) {
-    alert(document.cookie);
-    event.preventDefault();
+    alert(workingHref.href);
          
     document.cookie = `username=${user}; path=/; max-age=0;`;
     document.cookie = `password=${pass}; path=/; max-age=0;`;
       
-    window.location.href = event.target.href;
+    //window.location.href = event.target.href;
     }
 }
