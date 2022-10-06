@@ -1,4 +1,5 @@
 let workingHref = document.getElementById("hidden_button");
+alert("cum")
 
 function delCookies() {
     alert(workingHref.href);
