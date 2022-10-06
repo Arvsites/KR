@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 
 from .models import Airconddata
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 def signin(request, username, password):
@@ -15,6 +15,10 @@ def signin(request, username, password):
             return 'wrong password'
     except User.DoesNotExist:
         return 'user not found'
+
+
+def sign_out(request):
+    logout(request)
 
 
 def get_days_link(days):

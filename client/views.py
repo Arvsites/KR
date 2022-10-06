@@ -21,3 +21,9 @@ def login(request):
         return HttpResponse(user)
 
     return client_page(request)
+
+
+def logout(request):
+    services.sign_out(request)
+    return render(request, 'main/main_page.html')
+
