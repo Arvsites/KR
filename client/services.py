@@ -43,6 +43,7 @@ def get_data(user, days='', data_type='graph'):
         days_to_show = 'now-1d'
 
     # counter to define from which grafana's panelId we should start
+    counter: list
     if data_type == 'graph':
         counter = [1, 3]
     if data_type == 'table':
