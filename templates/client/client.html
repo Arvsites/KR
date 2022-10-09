@@ -27,10 +27,10 @@
             <div id="interface">
                 <!-- <div id="errors">Ошибки отсутствуют</div> -->
                 <div id="buttons">
-                    <a href="{% url 'client:client_page' days_to_show=7 %}" class="button">ПОКАЗАТЬ ДАННЫЕ ЗА 7 ДНЕЙ</a>
-                    <a href="{% url 'client:client_page' days_to_show=1 %}" class="button">ПОКАЗАТЬ ДАННЫЕ ЗА 1 ДЕНЬ</a>
-                    <a href="" class="button">Lorem ipsum</a>
-                    <a href="" class="button">Lorem ipsum</a>
+                    <a href="{% url 'client:client_page' days_to_show=7 data_type=graph%}" class="button">ДАННЫЕ ЗА 7 ДНЕЙ (ГРАФИК)</a>
+                    <a href="{% url 'client:client_page' days_to_show=1 data_type=graph%}" class="button">ДАННЫЕ ЗА 1 ДЕНЬ (ГРАФИК)</a>
+                    <a href="{% url 'client:client_page' days_to_show=1 data_type=table%}" class="button">ПОЛНЫЙ ПАКЕТ ЗА 7 ДНЕЙ (ТАБЛИЦА)</a>
+                    <a href="{% url 'client:client_page' days_to_show=1 data_type=table%}" class="button">ПОЛНЫЙ ПАКЕТ ЗА 1 ДЕНЬ (ТАБЛИЦА)</a>
                 </div>
             </div>
             <div id="chart">

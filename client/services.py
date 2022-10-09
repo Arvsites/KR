@@ -28,16 +28,25 @@ def get_days_link(days):
         return 'now-7d'
 
 
-def get_data(user, days=''):
-    grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'}
+def get_data(user, days='', data_type='graph'):
     """Get data for showing grafana graphics"""
+
+    grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'} # parts of user's panel's id
+
     user_id = user.id
+    # list of links to get grafana's data
     grafana_data_list = []
 
     if days:
         days_to_show = get_days_link(days)
     else:
         days_to_show = 'now-1d'
+
+    # counter to define from which grafana's panelId we should start
+    if data_type == 'graph':
+        counter = [1, 3]
+    if data_type == 'table':
+        counter = [4, 6]
 
     if user_id == 1:
         for client in User.objects.all():
@@ -46,7 +55,7 @@ def get_data(user, days=''):
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             if airconds_count == 1:
-                for i in range(1, 3):
+                for i in range(counter[0], counter[1]):
                     if client.id == 2:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
@@ -66,7 +75,7 @@ def get_data(user, days=''):
     airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
 
     if airconds_count == 1:
-        for i in range(1, 3):
+        for i in range(counter[0], counter[1]):
             if user_id == 2:
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
