@@ -28,10 +28,19 @@ def get_days_link(days):
         return 'now-7d'
 
 
+def get_panelId_counter(data_type):
+    if data_type == 'graph':
+        return [1, 3]
+    if data_type == 'table':
+        return [4, 6]
+
+
 def get_data(user, days='', data_type='graph'):
     """Get data for showing grafana graphics"""
 
     grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'} # parts of user's panel's id
+    # counter to define from which grafana's panelId we should start
+    counter = get_panelId_counter(data_type)
 
     user_id = user.id
     # list of links to get grafana's data
@@ -41,13 +50,6 @@ def get_data(user, days='', data_type='graph'):
         days_to_show = get_days_link(days)
     else:
         days_to_show = 'now-1d'
-
-    # counter to define from which grafana's panelId we should start
-    counter: list
-    if data_type == 'graph':
-        counter = [1, 3]
-    if data_type == 'table':
-        counter = [4, 6]
 
     if user_id == 1:
         for client in User.objects.all():
