@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from . import services
 
 
-def client_page(request, days_to_show='', data_type=''):
+def client_page(request, days_to_show='', data_type='graph'):
     grafana_data = services.get_data(request.user, days=days_to_show, data_type=data_type)
     return render(request, 'client/client.html', {'user': request.user, 'grafana_data': grafana_data})
 
