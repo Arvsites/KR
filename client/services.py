@@ -32,7 +32,7 @@ def get_panelId_counter(data_type):
     if data_type == 'graph':
         return [1, 3]
     if data_type == 'table':
-        return [2, 4]
+        return [3, 5]
 
 
 def get_data(user, days='', data_type='graph'):
