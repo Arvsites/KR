@@ -11,26 +11,39 @@
     <body>
         <div id="header">
             <div id="logo">
-                <img id="logo_img" src="{% static '/main/img/logo_img.png' %}" >
-                <img id="logo_text" src="{% static '/main/img/logo_text.png' %}">
+                <!-- <img id="logo_img" src="{% static '/main/img/logo_img.png' %}" > -->
+                <img id="logo_img" src="img/logo_img.png">
             </div>
             <div id="user">
                 <div id="user_info">
-                    <div>Имя: {{ user.username }}</div>
-                    <div>ID: {{ user.id }}</div>
+                    <div>{{ user.username }}</div>
                 </div>
                 <div class="button" onclick="delCookies()"> ВЫЙТИ </div>
-                <a id="hidden_button" style="display: none;" href='{% url 'client:logout' %}'></a>
+                <a id="hidden_button" style="display: none;" href="{% url 'client:logout' %}"></a>
+
             </div>    
         </div>
         <div id='body'>
             <div id="interface">
-                <!-- <div id="errors">Ошибки отсутствуют</div> -->
+                <div id="errors">Неисправности: СЮДА КОД ДЛЯ ОШИБОК </div>
+                <div id="device_info">
+                    СЮДА КОД ДЛЯ ЗНАЧЕНИЙ ДАТЧИКОВ
+                </div>
                 <div id="buttons">
-                    <a href="{% url 'client:client_page' days_to_show=7 data_type='graph'%}" class="button">ДАННЫЕ ЗА 7 ДНЕЙ (ГРАФИК)</a>
-                    <a href="{% url 'client:client_page' days_to_show=1 data_type='graph'%}" class="button">ДАННЫЕ ЗА 1 ДЕНЬ (ГРАФИК)</a>
-                    <a href="{% url 'client:client_page' days_to_show=1 data_type='table'%}" class="button">ПОЛНЫЙ ПАКЕТ ЗА 7 ДНЕЙ (ТАБЛИЦА)</a>
-                    <a href="{% url 'client:client_page' days_to_show=1 data_type='table'%}" class="button">ПОЛНЫЙ ПАКЕТ ЗА 1 ДЕНЬ (ТАБЛИЦА)</a>
+                    <div class="button_block">
+                        <div class="button_group">Графики</div>
+                        <div class="button_box">
+                            <a href="{% url 'client:client_page' days_to_show=7 data_type='graph'%}" class="button">ДАННЫЕ ЗА 7 ДНЕЙ </a>
+                            <a href="{% url 'client:client_page' days_to_show=1 data_type='graph'%}" class="button">ДАННЫЕ ЗА 1 ДЕНЬ </a>
+                        </div>
+                    </div>
+                    <div class="button_block">
+                        <div class="button_group">Таблицы</div>
+                        <div class="button_box">
+                            <a href="{% url 'client:client_page' days_to_show=1 data_type='table'%}" class="button">ПОЛНЫЙ ПАКЕТ ЗА 7 ДНЕЙ</a>
+                            <a href="{% url 'client:client_page' days_to_show=1 data_type='table'%}" class="button">ПОЛНЫЙ ПАКЕТ ЗА 1 ДЕНЬ</a>
+                        </div>    
+                    </div>
                 </div>
             </div>
             <div id="chart">
