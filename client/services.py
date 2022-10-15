@@ -94,3 +94,15 @@ def get_data(user, days='', data_type='graph'):
                     f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
     return grafana_data_list
+
+
+def get_current_data(user):
+    """Gets current aircond's data from postgresql"""
+    data = Airconddata.objects.filter(client=user.id).latest('id')
+    return {"t1": data.t1,
+            "t2": data.t2,
+            "t3": data.t3,
+            "t4": data.t4,
+            "t5": data.t5,
+            "i1": data.i1,
+            "b1": data.b1}

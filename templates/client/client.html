@@ -26,7 +26,9 @@
             <div id="interface">
                 <div id="errors">Неисправности: СЮДА КОД ДЛЯ ОШИБОК </div>
                 <div id="device_info">
-                    СЮДА КОД ДЛЯ ЗНАЧЕНИЙ ДАТЧИКОВ
+                    {% for key, value in current_data.items %}
+                        <p>{{key}}:  {{value}}</p>
+                    {% endfor %}
                 </div>
                 <div id="buttons">
                     <div class="button_block">
