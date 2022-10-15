@@ -26,5 +26,5 @@ def login(request):
 
 def logout(request):
     services.sign_out(request)
-    return render(request, 'main/main_page.html')
+    return render(request, 'client/login.html')
 
