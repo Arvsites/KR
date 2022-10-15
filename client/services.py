@@ -42,7 +42,6 @@ def get_data(user, days='', data_type='graph'):
 
     grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'} # parts of user's panel's id
     # counter to define from which grafana's panelId we should start
-    counter = get_panelId_counter(data_type)
 
     user_id = user.id
     # list of links to get grafana's data
@@ -59,6 +58,8 @@ def get_data(user, days='', data_type='graph'):
                 continue
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
+            counter = get_panelId_counter(data_type,  airconds_count)
+
             if airconds_count == 1:
                 for i in range(counter["user2"][0], counter["user2"][1]):
                     if client.id == 2:
@@ -78,6 +79,7 @@ def get_data(user, days='', data_type='graph'):
         return grafana_data_list
 
     airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
+    counter = get_panelId_counter(data_type, airconds_count)
 
     if airconds_count == 1:
         for i in range(counter["user2"][0], counter["user2"][1]):
