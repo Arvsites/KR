@@ -28,11 +28,13 @@ def get_days_link(days):
         return 'now-7d'
 
 
-def get_panelId_counter(data_type):
+def get_panelId_counter(data_type, airconds_count):
     if data_type == 'graph':
-        return [1, 3]
+        # formula to detect from which to which graph or table get data from grafana
+        return {"user2": [1, airconds_count * 2 + 1], "user3": [1, airconds_count * 2 + 1]}
     if data_type == 'table':
-        return [3, 5]
+        return {"user2": [airconds_count * 2 + 1, 2 * (airconds_count * 2 + 1) - 2],
+                "user3": [airconds_count * 2 + 1, 2 * (airconds_count * 2 + 1) - 2]}
 
 
 def get_data(user, days='', data_type='graph'):
@@ -58,7 +60,7 @@ def get_data(user, days='', data_type='graph'):
 
             airconds_count = Airconddata.objects.filter(client=client.id).first().airconds_count
             if airconds_count == 1:
-                for i in range(counter[0], counter[1]):
+                for i in range(counter["user2"][0], counter["user2"][1]):
                     if client.id == 2:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{client.id}?orgId"
@@ -66,7 +68,7 @@ def get_data(user, days='', data_type='graph'):
                             f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
             else:
-                for i in range(1, airconds_count * 2 + 1):
+                for i in range(counter["user3"][0], counter["user3"][1]):
                     if client.id == 3:
                         grafana_data_list.append(
                             f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{client.id}?orgId"
@@ -78,7 +80,7 @@ def get_data(user, days='', data_type='graph'):
     airconds_count = Airconddata.objects.filter(client=user_id).first().airconds_count
 
     if airconds_count == 1:
-        for i in range(counter[0], counter[1]):
+        for i in range(counter["user2"][0], counter["user2"][1]):
             if user_id == 2:
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user2']}/user{user_id}?orgId"
@@ -86,7 +88,7 @@ def get_data(user, days='', data_type='graph'):
                     f"={days_to_show}&to=now&theme=dark&panelId={i}")
 
     else:
-        for i in range(1, airconds_count * 3 + 1):
+        for i in range(counter["user3"][0], counter["user3"][1]):
             if user_id == 3:
                 grafana_data_list.append(
                     f"https://multimer.ru:3000/d-solo/{grafana_links_parts['user3']}/user{user_id}?orgId"
