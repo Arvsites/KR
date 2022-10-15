@@ -24,7 +24,7 @@ def sign_out(request):
 def get_days_link(days):
     if days == 1:
         return 'now-1d'
-    if days == 1:
+    if days == 7:
         return 'now-7d'
 
 
