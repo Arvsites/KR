@@ -104,5 +104,5 @@ def get_current_data(user):
             "t3": data.t3,
             "t4": data.t4,
             "t5": data.t5,
-            "i1": data.i1,
-            "b1": data.b1}
+            "i1": data.current,
+            "b1": data.pressure}
