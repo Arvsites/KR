@@ -33,8 +33,8 @@ def get_panelId_counter(data_type, airconds_count):
         # formula to detect from which to which graph or table get data from grafana
         return {"user2": [1, airconds_count * 2 + 1], "user3": [1, airconds_count * 2 + 1]}
     if data_type == 'table':
-        return {"user2": [airconds_count * 2 + 1, 2 * (airconds_count * 2 + 1) - 2],
-                "user3": [airconds_count * 2 + 1, 2 * (airconds_count * 2 + 1) - 2]}
+        return {"user2": [airconds_count * 2 + 1, 2 * (airconds_count * 2 + 1) - 1],
+                "user3": [airconds_count * 2 + 1, 2 * (airconds_count * 2 + 1) - 1]}
 
 
 def get_data(user, days='', data_type='graph'):
