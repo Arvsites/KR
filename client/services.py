@@ -40,10 +40,12 @@ def get_panelId_counter(data_type, airconds_count):
 def get_data(user, days='', data_type='graph'):
     """Get data for showing grafana graphics"""
 
-    grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'} # parts of user's panel's id
-    # counter to define from which grafana's panelId we should start
+    # parts of user's panel's id
+    grafana_links_parts = {'user2': 'pr5Ye79nz', 'user3': '3B_3gV9nk'}
 
+    # counter to define from which grafana's panelId we should start
     user_id = user.id
+
     # list of links to get grafana's data
     grafana_data_list = []
 
