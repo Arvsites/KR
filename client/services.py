@@ -126,12 +126,10 @@ def get_current_data(user):
 
 
 def get_errors(user):
-    broker_address = config_mqtt.BROKER_ADDRESS
-
     client = mqtt.Client("error_sender_site")
     client.username_pw_set(config_mqtt.BROKER_LOGIN, config_mqtt.BROKER_PASSWORD)
 
-    client.connect(broker_address, port=config_mqtt.BROKER_PORT)
+    client.connect(config_mqtt.BROKER_ADDRESS, port=config_mqtt.BROKER_PORT)
 
     # check if user is admin and the don't return any data
     if user.id == 1:
