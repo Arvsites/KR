@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 from .models import Airconddata
 from django.contrib.auth import authenticate, login, logout
 
+import paho.mqtt.client as mqtt
+import config
+import error_handler
+
 
 def signin(request, username, password):
     try:
@@ -119,3 +123,45 @@ def get_current_data(user):
                 "i1": data.current,
                 "b1": data.pressure
                 }
+
+
+def get_errors(user):
+    broker_address = config.BROKER_ADDRESS
+
+    client = mqtt.Client("error_sender_site")
+    client.username_pw_set(config.BROKER_LOGIN, config.BROKER_PASSWORD)
+
+    client.connect(broker_address, port=config.BROKER_PORT)
+
+    # check if user is admin and the don't return any data
+    if user.id == 1:
+        errors = {}
+        for client in User.objects.all():
+            if client.id == 1:
+                continue
+
+            if client.id == 2:
+                cond_id = Airconddata.objects.filter(client=user.id).latest('cond_id')
+                data = error_handler.receive(client, str(cond_id))
+                errors[f"{client.id}"] = error_hadler.analyze_data(data)
+
+            if client.id == 3:
+                data = error_handler.receive(client, "2")
+                errors = error_hadler.analyze_data(data)
+                data = error_handler.receive(client, "3")
+                errors[f"{client.id}"] = error_hadler.analyze_data(data)
+
+        return errors
+
+    if user.id == 2:
+        data = error_handler.receive(client, "1")
+        errors = error_hadler.analyze_data(data)
+
+        return {f"{user.id}": errors}
+    if user.id == 3:
+        data = error_handler.receive(client, "2")
+        errors = error_hadler.analyze_data(data)
+        data = error_handler.receive(client, "3")
+        errors.append(error_hadler.analyze_data(data))
+
+        return errors
