@@ -151,7 +151,7 @@ def get_errors(user):
 
     if user.id == 2:
         data = error_handler.receive(client, "1")
-        errors = error_hadler.analyze_data(data)
+        errors = error_handler.analyze_data(data)
 
         return {f"{user.id}": errors}
     if user.id == 3:
