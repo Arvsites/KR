@@ -161,3 +161,19 @@ def get_errors(user):
         errors.append(error_handler.analyze_data(data, str(user.id)))
 
         return errors
+
+
+def get_users(user):
+    """Return's users to display airconds's errors"""
+
+    users = []
+    if user.id == 1:
+        for client in User.objects.all():
+            if client.id == 1:
+                continue
+
+            users.append(client.username)
+        return users
+
+    else:
+        return [user.username]

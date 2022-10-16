@@ -25,9 +25,9 @@
         <div id='body'>
             <div id="interface">
                 <div id="errors">
-                    {% for cond_errors in errors %}
+                    {% for cond_errors, user in errors, users %}
                         {% for error in cond_errors %}
-                            <p>{{error}}</p>
+                            <p>Ошибки {{user}}:  {{error}}</p>
                         {% endfor %}
                     {% endfor %}
                 </div>

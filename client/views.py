@@ -7,10 +7,12 @@ def client_page(request, days_to_show='', data_type='graph'):
     grafana_data = services.get_data(request.user, days=days_to_show, data_type=data_type)
     current_data = services.get_current_data(request.user)
     errors = services.get_errors(request.user)
+    users = services.get_users(request.user)
     return render(request, 'client/client.html', {'user': request.user,
                                                   'grafana_data': grafana_data,
                                                   'current_data': current_data,
-                                                  'errors': errors})
+                                                  'errors': errors,
+                                                  'users': users})
 
 
 def login_page(request):
