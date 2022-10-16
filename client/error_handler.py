@@ -41,8 +41,6 @@ def analyze_data(data: dict, username: str, cond_id: str):
         if int(data[key]) > MAX_VALUES[key] or int(data[key]) < MIN_VALUES[key] :
             errors[f"Ошибки  {username}, кондиционер с id {cond_id}, датчик {key}: "] = f'Датчик {key} выдал аномальное значение {data[key]}! Проверьте, всё ли в порядке.'
 
-    if not errors:
-        return
     return errors
 
 
