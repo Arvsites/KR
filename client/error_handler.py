@@ -1,4 +1,5 @@
 import time
+import ast
 
 import paho.mqtt.client as mqtt
 
@@ -31,7 +32,7 @@ def analyze_data(data: dict):
     MIN_VALUES """
     errors = []
 
-    for key in data.keys() :
+    for key in ast.literal_eval(data.keys()):
         if key == 'time' or key == 'cond_id' or key == 'client_id' or key == 'telegram_chat_id' or key == 'airconds_count':
             continue
         if int(data[key]) > MAX_VALUES[key] or int(data[key]) < MIN_VALUES[key] :
