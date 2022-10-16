@@ -27,13 +27,13 @@ MIN_VALUES = {
 }
 
 
-def analyze_data(data: dict):
+def analyze_data(data: dict, user_id: str):
     """Analyzes data from sensors and detects if there any errors. If some value is more than MAX_VALUE or less than
     MIN_VALUES """
     errors = []
 
     if not data:
-        return {}
+        return {user_id: "Ошибки отсутствуют"}
 
     for key in ast.literal_eval(data.keys()):
         if key == 'time' or key == 'cond_id' or key == 'client_id' or key == 'telegram_chat_id' or key == 'airconds_count':
