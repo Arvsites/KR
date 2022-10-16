@@ -139,26 +139,26 @@ def get_errors(user):
             if client.id == 2:
                 cond_id = Airconddata.objects.filter(client=client.id).latest('cond_id')
                 data = error_handler.receive(mqtt_client, str(cond_id))
-                errors.append(error_handler.analyze_data(data, str(client.id)))
+                errors.append(error_handler.analyze_data(data, str(client.id), str(cond_id)))
 
             if client.id == 3:
                 data = error_handler.receive(mqtt_client, "2")
-                errors.append(error_handler.analyze_data(data, str(client.id)))
+                errors.append(error_handler.analyze_data(data, str(client.id), "2"))
                 data = error_handler.receive(mqtt_client, "3")
-                errors.append(error_handler.analyze_data(data, str(client.id)))
+                errors.append(error_handler.analyze_data(data, str(client.id), "3"))
 
         return errors
 
     if user.id == 2:
         data = error_handler.receive(mqtt_client, "1")
-        errors = error_handler.analyze_data(data, str(user.id))
+        errors = error_handler.analyze_data(data, str(user.id), "1")
 
         return errors
     if user.id == 3:
         data = error_handler.receive(mqtt_client, "2")
-        errors = error_handler.analyze_data(data, str(user.id))
+        errors = error_handler.analyze_data(data, str(user.id), "2")
         data = error_handler.receive(mqtt_client, "3")
-        errors.append(error_handler.analyze_data(data, str(user.id)))
+        errors.append(error_handler.analyze_data(data, str(user.id), "3"))
 
         return errors
 
