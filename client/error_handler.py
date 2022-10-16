@@ -32,6 +32,9 @@ def analyze_data(data: dict):
     MIN_VALUES """
     errors = []
 
+    if not data:
+        return {}
+
     for key in ast.literal_eval(data.keys()):
         if key == 'time' or key == 'cond_id' or key == 'client_id' or key == 'telegram_chat_id' or key == 'airconds_count':
             continue
@@ -58,4 +61,4 @@ def receive(receiver, aircond_num: str):
     if message_payload != '':
         return message_payload
     else:
-        return {}
+        return False
