@@ -25,8 +25,10 @@
         <div id='body'>
             <div id="interface">
                 <div id="errors">
-                    {% for error in errors %}
-                        <p>{{error}}</p>
+                    {% for cond_errors in errors %}
+                        {% for error in cond_errors %}
+                            <p>{{error}}</p>
+                        {% endfor %}
                     {% endfor %}
                 </div>
                 <div id="device_info">
