@@ -33,7 +33,7 @@ def analyze_data(data: dict, user_id: str):
     errors = []
 
     if not data:
-        return {user_id: "Ошибки отсутствуют"}
+        return "Ошибки отсутствуют"
 
     for key in ast.literal_eval(data.keys()):
         if key == 'time' or key == 'cond_id' or key == 'client_id' or key == 'telegram_chat_id' or key == 'airconds_count':
