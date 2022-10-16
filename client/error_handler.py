@@ -55,7 +55,7 @@ def receive(receiver, aircond_num: str):
     receiver.loop_start()
 
     receiver.subscribe(f"/dev{aircond_num}")
-    time.sleep(4)
+    time.sleep(2)
     receiver.loop_stop()
 
     if message_payload != '':
