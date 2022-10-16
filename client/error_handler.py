@@ -41,7 +41,9 @@ def analyze_data(data: dict):
         return
     return errors
 
+
 message_payload = ''
+
 
 def receive(receiver, aircond_num: str):
     """receives data from airconds"""

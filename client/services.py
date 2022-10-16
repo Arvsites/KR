@@ -125,7 +125,7 @@ def get_current_data(user):
                 }
 
 
-def get_errors(user):
+"""def get_errors(user):
     client = mqtt.Client("error_sender_site")
     client.username_pw_set('kr_mqtt', 'Asa6XRvcXN74pHZ3')
 
@@ -161,3 +161,4 @@ def get_errors(user):
         errors.append(error_hadler.analyze_data(data))
 
         return errors
+"""
