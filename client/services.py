@@ -104,11 +104,18 @@ def get_data(user, days='', data_type='graph'):
 
 def get_current_data(user):
     """Gets current aircond's data from postgresql"""
-    data = Airconddata.objects.filter(client=user.id).latest('id')
-    return {"t1": data.t1,
-            "t2": data.t2,
-            "t3": data.t3,
-            "t4": data.t4,
-            "t5": data.t5,
-            "i1": data.current,
-            "b1": data.pressure}
+
+    # check if user is admin and the don't return any data
+    if user.id == 1:
+        return {}
+    else:
+        data = Airconddata.objects.filter(client=user.id).latest('id')
+        return {
+                "t1": data.t1,
+                "t2": data.t2,
+                "t3": data.t3,
+                "t4": data.t4,
+                "t5": data.t5,
+                "i1": data.current,
+                "b1": data.pressure
+                }
