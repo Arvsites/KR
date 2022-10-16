@@ -131,7 +131,7 @@ def get_errors(user):
 
     # check if user is admin and the don't return any data
     if user.id == 1:
-        errors = {}
+        errors = []
         for client in User.objects.all():
             if client.id == 1:
                 continue
@@ -139,13 +139,13 @@ def get_errors(user):
             if client.id == 2:
                 cond_id = Airconddata.objects.filter(client=client.id).latest('cond_id')
                 data = error_handler.receive(mqtt_client, str(cond_id))
-                errors["2"] = error_handler.analyze_data(data, str(client.id))
+                errors.append(error_handler.analyze_data(data, str(client.id)))
 
             if client.id == 3:
                 data = error_handler.receive(mqtt_client, "2")
                 errors = error_handler.analyze_data(data, str(client.id))
                 data = error_handler.receive(mqtt_client, "3")
-                errors["3"] = error_handler.analyze_data(data, str(client.id))
+                errors.append(error_handler.analyze_data(data, str(client.id)))
 
         return errors
 
@@ -153,7 +153,7 @@ def get_errors(user):
         data = error_handler.receive(mqtt_client, "1")
         errors = error_handler.analyze_data(data, str(user.id))
 
-        return {f"{user.id}": errors}
+        return errors
     if user.id == 3:
         data = error_handler.receive(mqtt_client, "2")
         errors = error_handler.analyze_data(data, str(user.id))
