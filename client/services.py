@@ -125,9 +125,9 @@ def get_current_data(user):
                 }
 
 
-"""def get_errors(user):
+def get_errors(user):
     client = mqtt.Client("error_sender_site")
-    client.username_pw_set('kr_mqtt', 'Asa6XRvcXN74pHZ3')
+    client.username_pw_set(config_mqtt.BROKER_LOGIN, config_mqtt.BROKER_PASSWORD)
 
     # check if user is admin and the don't return any data
     if user.id == 1:
@@ -161,4 +161,3 @@ def get_current_data(user):
         errors.append(error_hadler.analyze_data(data))
 
         return errors
-"""
