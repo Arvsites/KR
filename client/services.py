@@ -129,8 +129,6 @@ def get_errors(user):
     client = mqtt.Client("error_sender_site")
     client.username_pw_set('kr_mqtt', 'Asa6XRvcXN74pHZ3')
 
-    client.connect("194.58.96.174", port=1883)
-
     # check if user is admin and the don't return any data
     if user.id == 1:
         errors = {}

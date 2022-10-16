@@ -1,6 +1,6 @@
 import paho.mqtt.client as mqtt
 
-import config
+from . import config_mqtt
 
 # check data
 MAX_VALUES = {
@@ -42,7 +42,7 @@ def analyze_data(data: dict):
 
 def receive(receiver, aircond_num: str):
     """receives data from airconds"""
-    receiver.connect(broker_address, port=config.BROKER_PORT)
+    receiver.connect(config_mqtt.BROKER_ADDRESS, port=config_mqtt.BROKER_PORT)
     receiver.loop_start()
 
     receiver.subscribe(f"/dev{aircond_num}")
