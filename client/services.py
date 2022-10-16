@@ -137,7 +137,7 @@ def get_errors(user):
                 continue
 
             if client.id == 2:
-                cond_id = Airconddata.objects.filter(client=user.id).latest('cond_id')
+                cond_id = Airconddata.objects.filter(client=client.id).latest('cond_id')
                 data = error_handler.receive(client, str(cond_id))
                 errors[f"{client.id}"] = error_hadler.analyze_data(data, str(client.id))
 
