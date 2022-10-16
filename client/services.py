@@ -145,7 +145,7 @@ def get_errors(user):
                 data = error_handler.receive(mqtt_client, "2")
                 errors = error_handler.analyze_data(data, str(client.id))
                 data = error_handler.receive(mqtt_client, "3")
-                errors[f"{client.id}"] = error_hadler.analyze_data(data, str(client.id))
+                errors[f"{client.id}"] = error_handler.analyze_data(data, str(client.id))
 
         return errors
 
@@ -156,8 +156,8 @@ def get_errors(user):
         return {f"{user.id}": errors}
     if user.id == 3:
         data = error_handler.receive(mqtt_client, "2")
-        errors = error_hadler.analyze_data(data, str(user.id))
+        errors = error_handler.analyze_data(data, str(user.id))
         data = error_handler.receive(mqtt_client, "3")
-        errors.append(error_hadler.analyze_data(data, str(user.id)))
+        errors.append(error_handler.analyze_data(data, str(user.id)))
 
         return errors
