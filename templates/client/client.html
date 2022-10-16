@@ -26,7 +26,9 @@
             <div id="interface">
                 <div id="errors">
                     {% for cond_error in errors %}
-                        <p>{{cond_error}}</p>
+                        {% for key, value in error.items %}
+                            <p>{{key}}: {{value}}</p>
+                        {% endfor %}
                     {% endfor %}
                 </div>
                 <div id="device_info">
