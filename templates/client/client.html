@@ -25,7 +25,7 @@
         <div id='body'>
             <div id="interface">
                 <div id="errors">
-                    {% for key, value in errors %}
+                    {% for key, value in errors.items %}
                         <p>{{key}}:  {{value}}</p>
                     {% endfor %}
                 </div>
