@@ -126,8 +126,8 @@ def get_current_data(user):
 
 
 def get_errors(user):
-    client = mqtt.Client("error_sender_site")
-    client.username_pw_set(config_mqtt.BROKER_LOGIN, config_mqtt.BROKER_PASSWORD)
+    mqtt_client = mqtt.Client("error_sender_site")
+    mqtt_client.username_pw_set(config_mqtt.BROKER_LOGIN, config_mqtt.BROKER_PASSWORD)
 
     # check if user is admin and the don't return any data
     if user.id == 1:
@@ -138,26 +138,26 @@ def get_errors(user):
 
             if client.id == 2:
                 cond_id = Airconddata.objects.filter(client=client.id).latest('cond_id')
-                data = error_handler.receive(client, str(cond_id))
+                data = error_handler.receive(mqtt_client, str(cond_id))
                 errors[f"{client.id}"] = error_hadler.analyze_data(data, str(client.id))
 
             if client.id == 3:
-                data = error_handler.receive(client, "2")
+                data = error_handler.receive(mqtt_client, "2")
                 errors = error_hadler.analyze_data(data, str(client.id))
-                data = error_handler.receive(client, "3")
+                data = error_handler.receive(mqtt_client, "3")
                 errors[f"{client.id}"] = error_hadler.analyze_data(data, str(client.id))
 
         return errors
 
     if user.id == 2:
-        data = error_handler.receive(client, "1")
+        data = error_handler.receive(mqtt_client, "1")
         errors = error_handler.analyze_data(data, str(user.id))
 
         return {f"{user.id}": errors}
     if user.id == 3:
-        data = error_handler.receive(client, "2")
+        data = error_handler.receive(mqtt_client, "2")
         errors = error_hadler.analyze_data(data, str(user.id))
-        data = error_handler.receive(client, "3")
+        data = error_handler.receive(mqtt_client, "3")
         errors.append(error_hadler.analyze_data(data, str(user.id)))
 
         return errors
