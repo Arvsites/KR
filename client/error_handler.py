@@ -58,4 +58,4 @@ def receive(receiver, aircond_num: str):
     if message_payload != '':
         return message_payload
     else:
-        return 'error'
+        return {}
