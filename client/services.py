@@ -139,25 +139,25 @@ def get_errors(user):
             if client.id == 2:
                 cond_id = Airconddata.objects.filter(client=user.id).latest('cond_id')
                 data = error_handler.receive(client, str(cond_id))
-                errors[f"{client.id}"] = error_hadler.analyze_data(data)
+                errors[f"{client.id}"] = error_hadler.analyze_data(data, str(client.id))
 
             if client.id == 3:
                 data = error_handler.receive(client, "2")
-                errors = error_hadler.analyze_data(data)
+                errors = error_hadler.analyze_data(data, str(client.id))
                 data = error_handler.receive(client, "3")
-                errors[f"{client.id}"] = error_hadler.analyze_data(data)
+                errors[f"{client.id}"] = error_hadler.analyze_data(data, str(client.id))
 
         return errors
 
     if user.id == 2:
         data = error_handler.receive(client, "1")
-        errors = error_handler.analyze_data(data)
+        errors = error_handler.analyze_data(data, str(client.id))
 
         return {f"{user.id}": errors}
     if user.id == 3:
         data = error_handler.receive(client, "2")
-        errors = error_hadler.analyze_data(data)
+        errors = error_hadler.analyze_data(data, str(client.id))
         data = error_handler.receive(client, "3")
-        errors.append(error_hadler.analyze_data(data))
+        errors.append(error_hadler.analyze_data(data, str(client.id)))
 
         return errors
