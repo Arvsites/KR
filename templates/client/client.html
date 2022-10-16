@@ -26,7 +26,7 @@
             <div id="interface">
                 <div id="errors">
                     {% for cond_error in errors %}
-                        {% for key, value in error.items %}
+                        {% for key, value in cond_error.items %}
                             <p>{{key}}: {{value}}</p>
                         {% endfor %}
                     {% endfor %}
