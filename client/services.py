@@ -4,7 +4,7 @@ from .models import Airconddata
 from django.contrib.auth import authenticate, login, logout
 
 import paho.mqtt.client as mqtt
-from .config import *
+from .config_mqtt import *
 from .error_handler import *
 
 
@@ -126,12 +126,12 @@ def get_current_data(user):
 
 
 def get_errors(user):
-    broker_address = BROKER_ADDRESS
+    broker_address = config_mqtt.BROKER_ADDRESS
 
     client = mqtt.Client("error_sender_site")
-    client.username_pw_set(BROKER_LOGIN, BROKER_PASSWORD)
+    client.username_pw_set(config_mqtt.BROKER_LOGIN, config_mqtt.BROKER_PASSWORD)
 
-    client.connect(broker_address, port=BROKER_PORT)
+    client.connect(broker_address, port=config_mqtt.BROKER_PORT)
 
     # check if user is admin and the don't return any data
     if user.id == 1:
@@ -143,25 +143,25 @@ def get_errors(user):
             if client.id == 2:
                 cond_id = Airconddata.objects.filter(client=user.id).latest('cond_id')
                 data = error_handler.receive(client, str(cond_id))
-                errors[f"{client.id}"] = analyze_data(data)
+                errors[f"{client.id}"] = error_hadler.analyze_data(data)
 
             if client.id == 3:
-                data = receive(client, "2")
-                errors = analyze_data(data)
-                data = receive(client, "3")
-                errors[f"{client.id}"] = analyze_data(data)
+                data = error_handler.receive(client, "2")
+                errors = error_hadler.analyze_data(data)
+                data = error_handler.receive(client, "3")
+                errors[f"{client.id}"] = error_hadler.analyze_data(data)
 
         return errors
 
     if user.id == 2:
-        data = receive(client, "1")
-        errors = analyze_data(data)
+        data = error_handler.receive(client, "1")
+        errors = error_hadler.analyze_data(data)
 
         return {f"{user.id}": errors}
     if user.id == 3:
-        data = receive(client, "2")
-        errors = analyze_data(data)
-        data = receive(client, "3")
-        errors.append(analyze_data(data))
+        data = error_handler.receive(client, "2")
+        errors = error_hadler.analyze_data(data)
+        data = error_handler.receive(client, "3")
+        errors.append(error_hadler.analyze_data(data))
 
         return errors
