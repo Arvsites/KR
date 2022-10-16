@@ -25,8 +25,8 @@
         <div id='body'>
             <div id="interface">
                 <div id="errors">
-                    {% for key, value in errors.items %}
-                        <p>{{key}}:  {{value}}</p>
+                    {% for error in errors %}
+                        <p>{{error}}</p>
                     {% endfor %}
                 </div>
                 <div id="device_info">
