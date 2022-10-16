@@ -4,8 +4,8 @@ from .models import Airconddata
 from django.contrib.auth import authenticate, login, logout
 
 import paho.mqtt.client as mqtt
-from .config_mqtt import *
-from .error_handler import *
+from . import config_mqtt
+from . import error_handler
 
 
 def signin(request, username, password):
