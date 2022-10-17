@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from . import services
 
@@ -27,7 +27,7 @@ def login(request):
     if isinstance(user, str):
         return HttpResponse(user)
 
-    return client_page(request)
+    return redirect('/client')
 
 
 def logout(request):
