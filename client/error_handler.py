@@ -38,9 +38,11 @@ def analyze_data(data: dict, username: str, cond_id: str):
     for key in ast.literal_eval(data.keys()):
         if key == 'time' or key == 'cond_id' or key == 'client_id' or key == 'telegram_chat_id' or key == 'airconds_count':
             continue
-        if int(data[key]) > MAX_VALUES[key] or int(data[key]) < MIN_VALUES[key] :
+        if int(data[key]) > MAX_VALUES[key] or int(data[key]) < MIN_VALUES[key]:
             errors[f"Ошибки  {username}, кондиционер с id {cond_id}, датчик {key}: "] = f'Датчик {key} выдал аномальное значение {data[key]}! Проверьте, всё ли в порядке.'
 
+    if not errors:
+        return {f"Ошибки  {username}, кондиционер с id {cond_id}: ": "Ошибки отсутствуют"}
     return errors
 
 
