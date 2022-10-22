@@ -16,11 +16,11 @@ def client_page(request, days_to_show='', data_type='graph'):
                                                       'errors': errors,
                                                       'users': users})
     else:
-        return redirect('client/login.html')
+        return redirect('/')
 
 
 def login_page(request):
-    return render(request, 'client/login.html')
+    return render(request, '/')
 
 
 def login(request):
@@ -36,5 +36,5 @@ def login(request):
 
 def logout(request):
     services.sign_out(request)
-    return redirect('client/login.html')
+    return redirect('/')
 
