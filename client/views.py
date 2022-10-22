@@ -4,15 +4,19 @@ from . import services
 
 
 def client_page(request, days_to_show='', data_type='graph'):
-    grafana_data = services.get_data(request.user, days=days_to_show, data_type=data_type)
-    current_data = services.get_current_data(request.user)
-    errors = services.get_errors(request.user)
-    users = services.get_users(request.user)
-    return render(request, 'client/client.html', {'user': request.user,
-                                                  'grafana_data': grafana_data,
-                                                  'current_data': current_data,
-                                                  'errors': errors,
-                                                  'users': users})
+    user = request.user
+    if services.check_anonymous(user):
+        grafana_data = services.get_data(user, days=days_to_show, data_type=data_type)
+        current_data = services.get_current_data(user)
+        errors = services.get_errors(user)
+        users = services.get_users(user)
+        return render(request, 'client/client.html', {'user': request.user,
+                                                      'grafana_data': grafana_data,
+                                                      'current_data': current_data,
+                                                      'errors': errors,
+                                                      'users': users})
+    else:
+        return redirect('client/login.html')
 
 
 def login_page(request):
@@ -32,5 +36,5 @@ def login(request):
 
 def logout(request):
     services.sign_out(request)
-    return render(request, 'client/login.html')
+    return redirect('client/login.html')
 

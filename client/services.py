@@ -8,6 +8,10 @@ from . import config_mqtt
 from . import error_handler
 
 
+def check_anonymous(user):
+    return user.is_authenticated
+
+
 def signin(request, username, password):
     try:
         User.objects.get(username=username)
