@@ -20,7 +20,7 @@ def client_page(request, days_to_show='', data_type='graph'):
 
 
 def login_page(request):
-    return render(request, '/')
+    return render(request, 'client/login.html')
 
 
 def login(request):
