@@ -31,7 +31,7 @@ def login(request):
     if isinstance(user, str):
         return HttpResponse(user)
 
-    return redirect('client')
+    return redirect('/client')
 
 
 def logout(request):
