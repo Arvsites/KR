@@ -119,13 +119,13 @@ def get_current_data(user):
     else:
         data = Airconddata.objects.filter(client=user.id).latest('id')
         return {
-                "t1": data.t1,
-                "t2": data.t2,
-                "t3": data.t3,
-                "t4": data.t4,
-                "t5": data.t5,
-                "i1": data.current,
-                "b1": data.pressure
+                "t1": f"{data.t1} C",
+                "t2": f"{data.t2} C",
+                "t3": f"{data.t3} C",
+                "t4": f"{data.t4} C",
+                "t5": f"{data.t5} C",
+                "i1": f"{data.current} A",
+                "b1": f"{data.pressure} Па"
                 }
 
 
