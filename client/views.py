@@ -16,7 +16,7 @@ def client_page(request, days_to_show='', data_type='graph'):
                                                       'errors': errors,
                                                       'users': users})
     else:
-        return redirect('multimer.ru')
+        return redirect('')
 
 
 def login_page(request):
@@ -31,10 +31,10 @@ def login(request):
     if isinstance(user, str):
         return HttpResponse(user)
 
-    return redirect('/client')
+    return redirect('client')
 
 
 def logout(request):
     services.sign_out(request)
-    return redirect('multimer.ru')
+    return redirect('')
 
