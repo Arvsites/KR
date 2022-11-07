@@ -66,7 +66,7 @@ body {
 #body #interface #buttons {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 10% 10% 5% 10%;
 }
 #body #interface #buttons .button_block {
@@ -101,6 +101,7 @@ body {
   text-decoration: solid;
   position: relative;
   text-align: center;
+  width: 100px;
   padding: 15px 25px;
   border: 1px solid;
   border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
@@ -142,4 +143,10 @@ body {
   border: 1px solid;
   border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
   border-image-slice: 1;
+}
+
+@media (max-width: 768px) {
+  #body #interface #buttons {
+    flex-wrap: wrap;
+  }  
 }
